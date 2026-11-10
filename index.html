@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Santiago Cofman · Backend & AI Engineer</title>
+<meta name="description" content="Santiago Bruno Cofman: Backend & AI Engineer en Andreani (.NET, Orleans, Azure, Kafka). Licenciado en Sistemas (UNLa), docente universitario y creador de San Sistemas.">
+<meta name="author" content="Santiago Bruno Cofman">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Santiago Cofman · Backend & AI Engineer">
+<meta property="og:description" content="Microservicios distribuidos para logística, agentes de IA y docencia universitaria.">
+<meta property="og:image" content="assets/santiago.jpg">
+<meta name="theme-color" content="#0c1214">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%23ff6b4a'/%3E%3Ctext x='50' y='64' font-size='42' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'%3Esc%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script>
+(function(){var s=localStorage.getItem('theme');var t=s||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);})();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Santiago Bruno Cofman","jobTitle":"Backend & AI Engineer","worksFor":{"@type":"Organization","name":"Andreani"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidad Nacional de Lanús"},"address":{"@type":"PostalAddress","addressLocality":"Buenos Aires","addressCountry":"AR"},"email":"mailto:santiagobc826@gmail.com","sameAs":["https://github.com/Santicof","https://www.linkedin.com/in/santiago-cofman-6961a5234/","https://www.instagram.com/san_sistemas"]}
+</script>
+<style>
+:root{--bg:#0c1214;--surface:#141d21;--surface2:#1a262b;--line:#26353b;--text:#e9f0ee;--muted:#93a8a3;--accent:#7fc4b0;--hot:#ff6b4a;--gold:#f2c14e;--glow:rgba(127,196,176,.10);color-scheme:dark}
+:root[data-theme="light"]{--bg:#f3f6f5;--surface:#ffffff;--surface2:#e8efed;--line:#d2ddd9;--text:#10201e;--muted:#4c615d;--accent:#2f7c6a;--hot:#d9421f;--gold:#a67c00;--glow:rgba(47,124,106,.08);color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.04rem/1.65 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 500px at 85% -10%,var(--glow),transparent 70%),radial-gradient(700px 500px at -10% 30%,var(--glow),transparent 70%)}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.08;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+img{max-width:100%;display:block}
+code,.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.4rem}
+.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;z-index:99;background:var(--hot);color:#fff;padding:.5rem 1rem;border-radius:8px}
+
+/* nav */
+.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1rem;height:64px}
+.logo{display:flex;align-items:center;gap:.55rem;text-decoration:none;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.1rem;white-space:nowrap}
+.logo svg{width:28px;height:28px}
+.links{display:flex;gap:1.1rem;margin-left:auto;overflow-x:auto;scrollbar-width:none;font-size:.92rem}
+.links::-webkit-scrollbar{display:none}
+.links a{text-decoration:none;color:var(--muted);white-space:nowrap;padding:.3rem 0}
+.links a:hover,.links a.on{color:var(--text)}
+.icon-btn{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;display:grid;place-items:center}
+.icon-btn:hover{border-color:var(--accent)}
+.icon-btn svg{width:18px;height:18px}
+
+/* buttons, tags */
+.btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.72rem 1.2rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:600;font-size:.95rem;color:var(--text);cursor:pointer;font-family:inherit;transition:border-color .2s,transform .2s}
+.btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn.main{background:var(--hot);border-color:var(--hot);color:#fff}
+.btn svg{width:17px;height:17px}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tags span{font-size:.78rem;padding:.18rem .62rem;border-radius:999px;border:1px solid var(--line);color:var(--accent);background:color-mix(in srgb,var(--accent) 6%,transparent);white-space:nowrap}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--hot);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.8rem;display:block}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding:4.5rem 0 3.5rem}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.85rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.32rem .85rem;background:var(--surface);margin-bottom:1.4rem}
+.status i{width:8px;height:8px;border-radius:50%;background:#3ccf7a;box-shadow:0 0 0 0 rgba(60,207,122,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(60,207,122,0)}100%{box-shadow:0 0 0 0 rgba(60,207,122,0)}}
+.hero h1{font-size:clamp(2.7rem,6.6vw,5rem);font-weight:800;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--hot)}
+.role{font-family:'JetBrains Mono',monospace;font-size:clamp(1rem,2vw,1.2rem);color:var(--accent);margin:1rem 0 0;min-height:1.6em}
+.role b{font-weight:600;transition:opacity .35s}
+.role::after{content:"_";animation:blink 1s steps(1) infinite;color:var(--hot)}
+@keyframes blink{50%{opacity:0}}
+.pitch{color:var(--muted);max-width:52ch;margin:1.1rem 0 1.8rem;font-size:1.08rem}
+.pitch strong{color:var(--text);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px dashed var(--line)}
+.stats b{display:block;font-family:'Bricolage Grotesque';font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--text)}
+.stats span{color:var(--muted);font-size:.82rem;line-height:1.35;display:block}
+.stage{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:24px;aspect-ratio:1/1;overflow:hidden;box-shadow:0 30px 80px -40px rgba(0,0,0,.5)}
+.stage canvas{width:100%;height:100%;display:block}
+.stage .bar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;gap:.4rem;padding:.7rem 1rem;font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surface) 85%,transparent);font-family:'JetBrains Mono',monospace}
+.stage .bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.stage .bar i:first-child{background:var(--hot)}
+.stage .bar span{margin-left:.5rem}
+.tip{position:absolute;left:1rem;bottom:1rem;right:1rem;font-size:.86rem;color:var(--muted);min-height:2.7em;background:color-mix(in srgb,var(--surface) 88%,transparent);border:1px solid var(--line);border-radius:12px;padding:.55rem .8rem}
+
+/* sections */
+section{padding:5rem 0;border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.4rem;flex-wrap:wrap}
+.head h2{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:800}
+.sub{color:var(--muted);margin:.7rem 0 0;max-width:62ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.1rem}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem;display:flex;flex-direction:column;gap:.8rem;transition:border-color .25s,transform .25s}
+.card:hover{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));transform:translateY(-2px)}
+.card h3{font-size:1.3rem}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.card .meta{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted);display:flex;gap:.6rem;flex-wrap:wrap}
+.card .meta b{color:var(--hot);font-weight:600}
+.card ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.93rem}
+.card ul li{margin:.18rem 0}
+.card ul li::marker{color:var(--accent)}
+.card .foot{margin-top:auto;display:flex;flex-direction:column;gap:.9rem}
+.lks{display:flex;gap:1rem;flex-wrap:wrap}
+.lk{color:var(--hot);font-weight:600;font-size:.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:.3rem}
+.lk:hover{text-decoration:underline}
+.lk svg{width:15px;height:15px}
+.priv{font-size:.85rem;color:var(--muted);font-style:italic}
+.span2{grid-column:span 2}
+.full{grid-column:1/-1}
+.ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.ico svg{width:22px;height:22px}
+
+/* about */
+.about{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start}
+.photo{position:relative}
+.photo img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:24px;border:1px solid var(--line);filter:saturate(.95)}
+.photo::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--hot);border-radius:24px;z-index:-1}
+.about p{margin:0 0 1rem;color:var(--muted);font-size:1.06rem}
+.about p strong{color:var(--text)}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.7rem;margin-top:1.6rem}
+.fact{border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem;background:var(--surface)}
+.fact small{display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.fact span{font-weight:600}
+
+/* andreani */
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0 0 2.4rem}
+.flow div{padding:.55rem .95rem;border-radius:12px;border:1px solid var(--line);background:var(--surface);font-size:.9rem;font-weight:600}
+.flow div small{display:block;font-weight:400;color:var(--muted);font-size:.75rem}
+.flow div.hl{border-color:var(--hot);background:color-mix(in srgb,var(--hot) 10%,var(--surface))}
+.flow .ar{color:var(--accent);font-family:'JetBrains Mono',monospace;border:0;background:none;padding:0}
+.demo{display:grid;grid-template-columns:1fr 320px;gap:1.2rem;margin-bottom:1.4rem}
+.map{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;min-height:440px}
+.map canvas{width:100%;height:100%;display:block;position:absolute;inset:0;touch-action:none;cursor:crosshair}
+.map .hint{position:absolute;left:.8rem;top:.8rem;font-size:.78rem;color:var(--muted);background:color-mix(in srgb,var(--surface) 88%,transparent);border:1px solid var(--line);padding:.3rem .65rem;border-radius:999px;pointer-events:none;font-family:'JetBrains Mono',monospace}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.2rem;display:flex;flex-direction:column;gap:1rem}
+.panel h4{font-size:.78rem;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;margin-bottom:.45rem}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;background:var(--surface2);padding:.3rem;border-radius:12px}
+.seg button{border:0;background:none;color:var(--muted);padding:.5rem .4rem;border-radius:9px;cursor:pointer;font:600 .82rem Figtree,sans-serif}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:0 1px 0 var(--line)}
+.uos{display:flex;flex-direction:column;gap:.35rem}
+.uos button{display:flex;align-items:center;gap:.6rem;border:1px solid var(--line);background:none;color:var(--text);padding:.5rem .7rem;border-radius:10px;cursor:pointer;font:500 .9rem Figtree,sans-serif;text-align:left}
+.uos button[aria-pressed="true"]{border-color:var(--text)}
+.uos i{width:14px;height:14px;border-radius:4px;flex:none}
+.uos em{margin-left:auto;font-style:normal;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted)}
+.panel .btn{width:100%;justify-content:center;padding:.6rem 1rem;font-size:.88rem}
+.panel .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.log{list-style:none;margin:0;padding:0;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);display:flex;flex-direction:column;gap:.35rem;min-height:5rem}
+.log li{border-left:2px solid var(--accent);padding-left:.55rem;line-height:1.45}
+.log li.warn{border-color:var(--hot)}
+.disclaimer{font-size:.8rem;color:var(--muted);margin:0 0 2.4rem;display:flex;gap:.5rem;align-items:flex-start}
+.disclaimer svg{flex:none;width:16px;height:16px;margin-top:.15rem;color:var(--gold)}
+.tree{font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.75;color:var(--muted);margin:0;white-space:pre;overflow-x:auto}
+.tree b{color:var(--text);font-weight:600}
+.tree em{color:var(--accent);font-style:normal}
+pre.code{margin:0;font-family:'JetBrains Mono',monospace;font-size:.78rem;line-height:1.7;overflow-x:auto;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:1rem;color:var(--muted)}
+pre.code .m{color:var(--hot);font-weight:600}
+pre.code .p{color:var(--text)}
+pre.code .c{color:var(--accent)}
+
+/* AI */
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin:.4rem 0}
+.pipe div{border:1px solid var(--line);border-radius:12px;padding:.7rem;background:var(--surface2);font-size:.82rem;position:relative}
+.pipe div b{display:block;font-size:.88rem;color:var(--text)}
+.pipe div span{color:var(--muted);font-size:.76rem;line-height:1.35;display:block;margin-top:.2rem}
+.pipe div:not(:last-child)::after{content:"→";position:absolute;right:-.55rem;top:50%;transform:translate(50%,-50%);color:var(--accent);font-family:'JetBrains Mono',monospace;z-index:1}
+.verdicts{display:flex;gap:.5rem;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:.76rem}
+.verdicts span{padding:.25rem .6rem;border-radius:8px;border:1px solid var(--line)}
+.v-ok{color:#3ccf7a}.v-warn{color:var(--gold)}.v-no{color:var(--hot)}
+.principles{counter-reset:p;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.principles div{counter-increment:p;border-top:2px solid var(--line);padding-top:1rem}
+.principles div::before{content:"0" counter(p);font-family:'JetBrains Mono',monospace;color:var(--hot);font-size:.8rem}
+.principles h4{font-size:1.08rem;margin:.3rem 0 .4rem}
+.principles p{margin:0;color:var(--muted);font-size:.93rem}
+
+/* projects */
+.filters{display:flex;gap:.45rem;flex-wrap:wrap}
+.filters button{border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:.42rem .9rem;border-radius:999px;cursor:pointer;font:600 .84rem Figtree,sans-serif}
+.filters button[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.card.hide{display:none}
+#pgrid{grid-auto-flow:dense}
+.feat{background:linear-gradient(140deg,var(--surface),color-mix(in srgb,var(--accent) 9%,var(--surface)))}
+.badge{position:absolute;top:1.2rem;right:1.2rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:.2rem .55rem;border-radius:999px;background:var(--hot);color:#fff;letter-spacing:.03em}
+.badge.live{background:#2fae67}
+.card:has(.badge) .meta{padding-right:7.5rem}
+.minilist{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.3rem .9rem;font-size:.88rem}
+.minilist a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--line);padding:.25rem 0}
+.minilist a:hover{color:var(--hot)}
+
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.1rem}
+.stack .card h3{font-size:1.05rem;display:flex;align-items:center;gap:.6rem}
+.stack .card h3 i{width:10px;height:10px;border-radius:3px;background:var(--hot)}
+.stack .tags span{color:var(--text);font-size:.82rem}
+.stack .tags span.core{border-color:var(--accent);color:var(--accent);font-weight:600}
+
+/* timeline */
+.tl{position:relative;display:grid;gap:0;margin-left:.5rem}
+.tl::before{content:"";position:absolute;left:0;top:.5rem;bottom:.5rem;width:2px;background:var(--line)}
+.row{position:relative;display:grid;grid-template-columns:10rem 1fr;gap:1.4rem;padding:0 0 2rem 2rem}
+.row::before{content:"";position:absolute;left:-6px;top:.45rem;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.row.now::before{background:var(--hot);border-color:var(--hot);box-shadow:0 0 0 5px color-mix(in srgb,var(--hot) 25%,transparent)}
+.row time{color:var(--accent);font-weight:600;font-family:'JetBrains Mono',monospace;font-size:.88rem;padding-top:.15rem}
+.row h3{font-size:1.2rem}
+.row .org{color:var(--hot);font-weight:600;font-size:.95rem}
+.row p{margin:.35rem 0 0;color:var(--muted)}
+.courses{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}
+
+/* teaching / content */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.quote{font-family:'Bricolage Grotesque';font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.25;font-weight:600;margin:0}
+.quote em{color:var(--hot);font-style:normal}
+.social{display:flex;gap:.6rem;flex-wrap:wrap}
+
+/* contact */
+.contact{text-align:center;padding:6rem 0 4rem}
+.contact h2{font-size:clamp(2.3rem,6vw,4.4rem);font-weight:800;letter-spacing:-.03em}
+.contact .sub{margin:1rem auto 2rem}
+.contact .btns{justify-content:center}
+.looking{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:.45rem;margin-bottom:2rem}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.toast{position:fixed;left:50%;bottom:1.5rem;transform:translate(-50%,200%);opacity:0;visibility:hidden;background:var(--text);color:var(--bg);padding:.6rem 1.1rem;border-radius:999px;font-weight:600;font-size:.9rem;transition:transform .3s,opacity .3s,visibility .3s;z-index:90}
+.toast.show{transform:translate(-50%,0);opacity:1;visibility:visible}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+ .hero{grid-template-columns:1fr;padding-top:3rem}
+ .stage{aspect-ratio:4/3}
+ .demo{grid-template-columns:1fr}
+ .about{grid-template-columns:1fr}
+ .photo{max-width:240px}
+ .pipe{grid-template-columns:1fr 1fr}
+ .pipe div::after{display:none}
+ .span2{grid-column:auto}
+}
+@media(max-width:700px){
+ .stats{grid-template-columns:1fr 1fr}
+ .two{grid-template-columns:1fr}
+ .row{grid-template-columns:1fr;gap:.2rem}
+ .links{display:none}
+ .top .wrap{justify-content:space-between}
+ section{padding:3.8rem 0}
+ .map{min-height:380px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .rv{opacity:1;transform:none;transition:none}
+ .status i,.role::after{animation:none}
+ .btn,.card{transition:none}
+}
+@media print{.top,.stage,.demo,.filters,.toast{display:none}.rv{opacity:1;transform:none}section{padding:1.5rem 0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="#inicio" aria-label="Inicio">
+   <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 90,27 90,73 50,96 10,73 10,27" fill="var(--hot)"/><text x="50" y="64" font-size="40" text-anchor="middle" fill="#fff" font-family="Bricolage Grotesque, Arial" font-weight="800">sc</text></svg>
+   Santiago Cofman
+  </a>
+  <nav class="links" aria-label="Secciones">
+   <a href="#sobre-mi">Sobre mí</a>
+   <a href="#trayectoria">Trayectoria</a>
+   <a href="#stack">Stack</a>
+   <a href="#andreani">Andreani</a>
+   <a href="#ia">IA</a>
+   <a href="#proyectos">Proyectos</a>
+   <a href="#docencia">Docencia</a>
+   <a href="#contenido">Contenido</a>
+   <a href="#contacto">Contacto</a>
+  </nav>
+  <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar tema claro/oscuro">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+ </div>
+</header>
+
+<main id="main">
+<div class="wrap" id="inicio">
+ <div class="hero">
+  <div>
+   <span class="status"><i></i>Abierto a nuevas oportunidades · Buenos Aires, AR</span>
+   <h1>Santiago<br>Bruno <em>Cofman</em></h1>
+   <p class="role" aria-live="polite"><span aria-hidden="true">&gt; </span><b id="role">Backend Engineer</b></p>
+   <p class="pitch">Licenciado en Sistemas. Diseño y opero <strong>microservicios distribuidos en .NET</strong> para la operación logística de <strong>Andreani</strong>, construyo <strong>agentes de IA</strong> que detectan y corrigen bugs, y enseño programación como <strong>docente universitario</strong> en la UNLa.</p>
+   <div class="btns">
+    <a class="btn main" href="#andreani">Ver mi trabajo
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="assets/cv-santiago-cofman.png" download="CV-Santiago-Cofman.png">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Descargar CV</a>
+    <a class="btn" href="https://github.com/Santicof" target="_blank" rel="noopener noreferrer">
+     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/santiago-cofman-6961a5234/" target="_blank" rel="noopener noreferrer">
+     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+   </div>
+   <div class="stats">
+    <div><b>2023→hoy</b><span>en Andreani, de DevOps a Backend</span></div>
+    <div><b>19</b><span>repositorios públicos en GitHub</span></div>
+    <div><b>56K+</b><span>personas en la comunidad de San Sistemas</span></div>
+    <div><b>B2</b><span>inglés, Cambridge Certificate</span></div>
+   </div>
+  </div>
+  <div class="stage" aria-label="Diagrama animado de un sistema orientado a eventos con las tecnologías que uso">
+   <div class="bar"><i></i><i></i><i></i><span>event-driven.topology</span></div>
+   <canvas id="graph"></canvas>
+   <div class="tip" id="graphTip">Pasá el mouse por un nodo. Así se ve un sistema orientado a eventos: los servicios no se llaman entre sí, publican y consumen mensajes.</div>
+  </div>
+ </div>
+</div>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi"><div class="wrap">
+ <div class="about rv">
+  <div class="photo"><img src="assets/santiago.jpg" alt="Foto de Santiago Cofman" width="296" height="296" loading="lazy"></div>
+  <div>
+   <span class="kicker">01 / Sobre mí</span>
+   <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1.2rem">Backend de día, IA siempre, docente por vocación.</h2>
+   <p>Soy <strong>Licenciado en Sistemas por la Universidad Nacional de Lanús</strong> y trabajo como <strong>Backend Developer .NET en el equipo de Cloud &amp; Data de Andreani</strong>, uno de los grupos logísticos más grandes de Argentina. Entré en 2023 como Analista DevOps automatizando despliegues en Azure y OpenShift, y hoy desarrollo los microservicios que modelan la base del flujo logístico: <strong>unidades operativas, zonas geográficas y la geolocalización de envíos</strong>.</p>
+   <p>En paralelo construyo productos propios: sistemas de turnos en producción para consultorios reales y <strong>sistemas multi-agente con LLMs</strong> que analizan código, proponen fixes y los validan con tests. Me interesa la IA aplicada con criterio de ingeniería: salidas estructuradas, reglas auditables y validación real.</p>
+   <p>Además soy <strong>docente universitario</strong> en materias de programación y habilidades blandas, y divulgo tecnología en <strong>San Sistemas</strong>, con reels y el podcast <em>“De Informáticos Para Informáticos”</em>.</p>
+   <div class="facts">
+    <div class="fact"><small>Rol actual</small><span>Software Engineer · Backend &amp; IA · Andreani</span></div>
+    <div class="fact"><small>Formación</small><span>Lic. en Sistemas · UNLa (2021–2025)</span></div>
+    <div class="fact"><small>Idiomas</small><span>Español nativo · Inglés B2 (Cambridge)</span></div>
+    <div class="fact"><small>Ubicación</small><span>Buenos Aires · remoto / híbrido</span></div>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<!-- TRAYECTORIA -->
+<section id="trayectoria"><div class="wrap">
+ <div class="head rv">
+  <div>
+   <span class="kicker">02 / Trayectoria</span>
+   <h2>De la facultad a producción</h2>
+  </div>
+  <a class="btn" href="assets/cv-santiago-cofman.png" download="CV-Santiago-Cofman.png">Descargar CV</a>
+ </div>
+ <div class="tl">
+  <div class="row now rv"><time>Actualidad</time><div><h3>Backend Developer .NET · Cloud &amp; Data</h3><span class="org">Andreani Grupo Logístico</span><p>Microservicios distribuidos con .NET Orleans, C# y Azure sobre arquitectura orientada a eventos. Unidades operativas, carga de zonas con hexágonos o Google Maps y geolocalización de envíos. Owner del proyecto de contratos con empresas, con auditoría y manejo de datos sensibles.</p></div></div>
+  <div class="row rv"><time>En curso</time><div><h3>Docente universitario</h3><span class="org">Universidad Nacional de Lanús</span><p>Docencia en materias de programación y habilidades blandas.</p></div></div>
+  <div class="row rv"><time>En curso</time><div><h3>Creador de contenido tecnológico</h3><span class="org">San Sistemas</span><p>Videos y podcast de divulgación sobre IA y desarrollo de software.</p></div></div>
+  <div class="row rv"><time>2024</time><div><h3>Java Developer</h3><span class="org">Universidad Nacional de Lanús</span><p>Desarrollo web backend con Java y Spring Boot.</p></div></div>
+  <div class="row rv"><time>2023</time><div><h3>Analista DevOps IT</h3><span class="org">Andreani Grupo Logístico</span><p>Despliegue de microservicios en Azure y OpenShift con pipelines CI/CD.</p></div></div>
+  <div class="row rv"><time>2021 – 2025</time><div><h3>Licenciatura en Sistemas</h3><span class="org">Universidad Nacional de Lanús</span><p>Trabajo Final Integrador: Planning Board académico (Spring Boot + React).</p></div></div>
+  <div class="row rv"><time>2014 – 2023</time><div><h3>Inglés · Upper Intermediate B2</h3><span class="org">Oxford English Institute · Cambridge Certificate</span></div></div>
+  <div class="row rv"><time>Cursos</time><div><h3>Formación complementaria</h3><div class="courses tags"><span>IA generativa</span><span>Agentes Copilot</span><span>Spring Boot</span><span>React</span><span>Docker</span><span>SQL</span><span>Linux</span><span>Git</span><span>Liderazgo</span></div></div></div>
+ </div>
+</div></section>
+
+<!-- STACK -->
+<section id="stack"><div class="wrap">
+ <div class="head rv">
+  <div>
+   <span class="kicker">03 / Stack</span>
+   <h2>Herramientas que uso</h2>
+   <p class="sub">Resaltadas, las que uso todos los días en producción.</p>
+  </div>
+ </div>
+ <div class="stack">
+  <div class="card rv"><h3><i></i>Backend</h3><div class="tags"><span class="core">C# / .NET</span><span class="core">.NET Orleans</span><span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>Entity Framework Core</span><span>MediatR / CQRS</span><span>Spring Security</span><span>Python / FastAPI</span><span>gRPC</span><span class="core">REST APIs</span><span>C++ / Sockets</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--accent)"></i>Datos y mensajería</h3><div class="tags"><span class="core">Kafka</span><span>MongoDB</span><span>PostgreSQL</span><span>Supabase</span><span>MySQL</span><span>SQL Server</span><span>Google Calendar API</span><span class="core">Event-driven</span><span>Microservicios</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--gold)"></i>Cloud y DevOps</h3><div class="tags"><span class="core">Azure</span><span class="core">Azure DevOps</span><span>OpenShift</span><span>Docker</span><span>Docker Compose</span><span>CI/CD</span><span>GitHub Actions</span><span>Nginx</span><span>Let's Encrypt</span><span>Oracle Cloud</span><span>Railway</span><span>Vercel</span><span>Linux</span><span>Git</span></div></div>
+  <div class="card rv"><h3><i style="background:#9b8cff"></i>IA</h3><div class="tags"><span class="core">LLMs</span><span class="core">Agentes</span><span>RAG</span><span>Groq / Llama</span><span>Ollama</span><span>Pydantic</span><span>Prompt engineering</span><span>GitHub Copilot</span><span>IA generativa</span></div></div>
+  <div class="card rv"><h3><i style="background:#5aa9ff"></i>Frontend</h3><div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span><span>Thymeleaf</span><span>HTML / CSS</span><span>SEO y accesibilidad</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--muted)"></i>Prácticas</h3><div class="tags"><span>Modelado de dominio</span><span>Arquitectura distribuida</span><span>Testing (pytest)</span><span>Metodologías ágiles</span><span>Code review</span><span>Liderazgo técnico</span><span>Redes TCP/IP</span><span>Geoespacial</span></div></div>
+ </div>
+</div></section>
+
+<!-- ANDREANI -->
+<section id="andreani"><div class="wrap">
+ <div class="head rv">
+  <div>
+   <span class="kicker">04 / Experiencia en producción</span>
+   <h2>Andreani: la base del flujo logístico</h2>
+   <p class="sub">Desarrollo microservicios distribuidos con <strong>.NET Orleans, C#, Azure y arquitectura orientada a eventos</strong>. Mi foco es el dominio sobre el que se apoya toda la operación: las <strong>unidades operativas</strong>, que organizan a los transportistas y a la infraestructura, sus zonas de cobertura y la geolocalización de cada envío. Además soy <strong>owner del proyecto de contratos con empresas</strong>, donde la auditoría y el cuidado de datos sensibles son críticos.</p>
+  </div>
+  <div class="tags"><span>.NET</span><span>C#</span><span>Orleans</span><span>Azure</span><span>Kafka</span><span>Event-driven</span><span>Google Maps API</span></div>
+ </div>
+
+ <div class="flow rv" aria-label="Flujo de geolocalización de un envío">
+  <div>Envío<small>ingresa con dirección</small></div><span class="ar">→</span>
+  <div>Geocodificación<small>lat / lng</small></div><span class="ar">→</span>
+  <div class="hl">Celda hexagonal<small>índice espacial</small></div><span class="ar">→</span>
+  <div class="hl">Zona<small>hexágonos o polígono</small></div><span class="ar">→</span>
+  <div class="hl">Unidad operativa<small>responsable</small></div><span class="ar">→</span>
+  <div>Transportista<small>última milla</small></div>
+ </div>
+
+ <div class="demo rv">
+  <div class="map">
+   <canvas id="hexmap" aria-label="Mapa interactivo de zonas hexagonales asignadas a unidades operativas"></canvas>
+   <span class="hint" id="hexHint">Arrastrá para pintar hexágonos</span>
+  </div>
+  <div class="panel">
+   <div>
+    <h4>Modo de carga de zona</h4>
+    <div class="seg" role="group" aria-label="Modo de carga">
+     <button type="button" data-mode="hex" aria-pressed="true">Hexágonos</button>
+     <button type="button" data-mode="poly" aria-pressed="false">Polígono · Google</button>
+    </div>
+   </div>
+   <div>
+    <h4>Unidad operativa</h4>
+    <div class="uos" id="uos" role="group" aria-label="Unidad operativa seleccionada"></div>
+   </div>
+   <button class="btn" type="button" id="closePoly" disabled>Cerrar polígono y rellenar</button>
+   <div class="btns" style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
+    <button class="btn main" type="button" id="ship">Simular envío</button>
+    <button class="btn" type="button" id="resetMap">Reiniciar</button>
+   </div>
+   <div>
+    <h4>Eventos</h4>
+    <ul class="log" id="hexlog" aria-live="polite"></ul>
+   </div>
+  </div>
+ </div>
+ <p class="disclaimer rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>Demo interactiva hecha para este portfolio: reproduce el concepto, no usa datos ni código de Andreani. El código productivo es propiedad de la empresa.</p>
+
+ <div class="grid">
+  <article class="card feat full rv">
+   <span class="badge">Project Owner</span>
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+   <h3 style="font-size:1.6rem;max-width:30ch">Plataforma de contratos con empresas: auditoría y datos sensibles</h3>
+   <p style="max-width:78ch">Soy el <strong>owner del proyecto</strong> por el que pasan los contratos de las empresas que trabajan con Andreani. Por la información que maneja, cada decisión técnica se toma pensando en dos cosas: que <strong>todo quede auditado</strong> y que los <strong>datos sensibles</strong> estén protegidos.</p>
+   <div class="two" style="gap:1.4rem">
+    <ul>
+     <li><strong>Ownership end-to-end</strong>: definición técnica, priorización y responsabilidad sobre lo que llega a producción.</li>
+     <li><strong>Trazabilidad y auditoría</strong>: registro de quién hizo qué cambio, cuándo y sobre qué contrato.</li>
+     <li>Interlocutor entre negocio, legal/compliance y el equipo técnico.</li>
+    </ul>
+    <ul>
+     <li><strong>Datos sensibles</strong>: acceso restringido por rol y exposición mínima de la información.</li>
+     <li>Integridad de la información contractual a lo largo de todo el flujo.</li>
+     <li>Mismo stack distribuido: .NET, Azure y comunicación por eventos.</li>
+    </ul>
+   </div>
+   <div class="foot"><div class="tags"><span>Project Owner</span><span>Auditoría</span><span>Datos sensibles</span><span>Seguridad</span><span>Compliance</span><span>.NET</span><span>Azure</span></div></div>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+   <h3>Geolocalización de envíos</h3>
+   <p>Cada envío se ubica en el mapa y se resuelve a qué zona y a qué unidad operativa pertenece. Es lo que permite asignarlo al transportista correcto y planificar la última milla.</p>
+   <ul><li>Resolución coordenada → celda → zona → unidad operativa</li><li>Servicio desacoplado que consume y publica eventos</li><li>Pensado para alto volumen de envíos diarios</li></ul>
+   <div class="foot"><div class="tags"><span>Geolocalización</span><span>Microservicios</span><span>.NET</span><span>Eventos</span></div></div>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v7.5H14M10 6.5h4"/></svg></div>
+   <h3>CRUD de unidades operativas</h3>
+   <p>Alta, edición y baja de unidades operativas con sus características, y CRUDs anidados que cuelgan de cada una. Es el modelo sobre el que se apoyan transportistas e infraestructura.</p>
+   <ul><li>Modelado de dominio con la unidad operativa como agregado raíz</li><li>Recursos anidados: características, zonas, transportistas</li><li>Validaciones de negocio e integridad entre entidades</li></ul>
+   <div class="foot"><div class="tags"><span>API REST</span><span>CRUD anidado</span><span>Modelado de dominio</span></div></div>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z"/><path d="M12 22V12M20.66 7L12 12 3.34 7"/></svg></div>
+   <h3>Carga de zonas: hexágonos o Google</h3>
+   <p>Soporte para definir la cobertura de cada unidad operativa de dos formas: cargando hexágonos directamente o dibujando polígonos con la API de Google Maps, que se convierten en celdas.</p>
+   <ul><li>Grilla hexagonal: áreas uniformes y vecinos equidistantes</li><li>Polígonos de Google Maps rellenados con hexágonos</li><li>Un único modelo de zona para ambas fuentes</li></ul>
+   <div class="foot"><div class="tags"><span>Hexágonos</span><span>Google Maps API</span><span>Zonificación</span></div></div>
+  </article>
+
+  <article class="card rv span2">
+   <h3>Modelo de dominio</h3>
+   <p>Cómo se organiza la información alrededor de una unidad operativa.</p>
+<pre class="tree" aria-label="Árbol del modelo de dominio"><b>UnidadOperativa</b>            <em># agregado raíz · CRUD</em>
+├── Caracteristicas[]       <em># CRUD anidado</em>
+├── Zonas[]                 <em># CRUD anidado</em>
+│   ├── tipo: hexagonos      → celdas[]
+│   └── tipo: poligono       → vertices[] (Google Maps) → celdas[]
+├── Transportistas[]        <em># quienes operan la zona</em>
+└── Infraestructura[]       <em># sucursales, centros, plataformas</em>
+
+<b>Envio</b> ── geolocalizar() ──▶ celda ──▶ zona ──▶ <b>UnidadOperativa</b></pre>
+  </article>
+
+  <article class="card rv">
+   <h3>Contrato de la API</h3>
+   <p>Forma ilustrativa de los recursos anidados.</p>
+<pre class="code"><span class="m">GET</span>    <span class="p">/unidades-operativas</span>
+<span class="m">POST</span>   <span class="p">/unidades-operativas</span>
+<span class="m">PUT</span>    <span class="p">/unidades-operativas/{id}</span>
+<span class="m">GET</span>    <span class="p">/unidades-operativas/{id}/caracteristicas</span>
+<span class="m">POST</span>   <span class="p">/unidades-operativas/{id}/zonas</span>
+       <span class="c">{ "tipo": "hexagonos", "celdas": [...] }</span>
+       <span class="c">{ "tipo": "poligono", "vertices": [...] }</span>
+<span class="m">POST</span>   <span class="p">/envios/{id}/geolocalizacion</span></pre>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.3 12.5 3.5 3.5 0 0 0 6.5 19z"/></svg></div>
+   <h3>Despliegue en Azure y OpenShift</h3>
+   <p>Mi primer rol en la empresa (Analista DevOps IT, 2023): automaticé el despliegue de microservicios con pipelines CI/CD.</p>
+   <ul><li>Pipelines de build y release en Azure DevOps</li><li>Despliegues en Azure y OpenShift</li><li>La base que hoy uso como desarrollador</li></ul>
+   <div class="foot"><div class="tags"><span>Azure DevOps</span><span>OpenShift</span><span>CI/CD</span><span>Containers</span></div></div>
+  </article>
+
+  <article class="card rv span2">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.3 11l9.4-4.8M7.3 13l9.4 4.8"/></svg></div>
+   <h3>Arquitectura distribuida orientada a eventos</h3>
+   <p>Los servicios se comunican publicando y consumiendo eventos, lo que los desacopla y permite reprocesar. Con <strong>Microsoft Orleans</strong> (modelo de actores virtuales) el estado se distribuye entre nodos sin manejar locks a mano, y todo corre en <strong>Azure</strong>.</p>
+   <div class="foot"><div class="tags"><span>.NET Orleans</span><span>Actores virtuales</span><span>Kafka</span><span>Azure</span><span>Escalabilidad horizontal</span></div></div>
+  </article>
+ </div>
+</div></section>
+
+<!-- IA -->
+<section id="ia"><div class="wrap">
+ <div class="head rv">
+  <div>
+   <span class="kicker">05 / AI Engineering</span>
+   <h2>IA con criterio de ingeniería</h2>
+   <p class="sub">No uso la IA como magia: la integro como un componente más del sistema, con contratos, validación y planes de contingencia.</p>
+  </div>
+ </div>
+
+ <article class="card feat full rv" style="margin-bottom:2.4rem">
+  <span class="badge">Destacado · IA</span>
+  <div class="meta"><b>2026</b><span>Python · FastAPI · Groq · React</span></div>
+  <h3 style="font-size:1.7rem;max-width:26ch">E-commerce AI Agent System: dos agentes que detectan, corrigen y deciden</h3>
+  <p style="max-width:75ch">Sistema multi-agente que analiza el código de un equipo de e-commerce, detecta bugs, genera un fix, <strong>lo valida corriendo pytest</strong> y decide si el cambio puede avanzar. Reemplaza una revisión manual de 15–30 minutos por un análisis de 7–15 segundos (menos de 0,1 s con caché).</p>
+  <div class="pipe" aria-label="Pipeline de agentes">
+   <div><b>Archivo .py</b><span>CLI, API REST o frontend</span></div>
+   <div><b>Orchestrator</b><span>coordina y acumula contexto, ~50 líneas de Python puro</span></div>
+   <div><b>BugDetectorAgent</b><span>LLM detecta → LLM genera fix → pytest antes/después</span></div>
+   <div><b>GateAgent</b><span>reglas determinísticas + LLM que explica la decisión</span></div>
+   <div><b>Veredicto</b><span>go / warn / no-go</span></div>
+  </div>
+  <div class="verdicts"><span class="v-no">auth.py → BLOCK</span><span class="v-warn">cart.py → WARN</span><span class="v-ok">utils.py → APPROVE</span></div>
+  <ul>
+   <li>Salida estructurada con <strong>JSON mode + Pydantic</strong>: el schema se valida aunque el LLM varíe.</li>
+   <li><strong>Fallback automático</strong> de Llama 3.3 70B a Llama 3.1 8B ante rate limit (degradación controlada).</li>
+   <li>Caché por <strong>hash de contenido</strong>, no por nombre: si el archivo cambia, se invalida sola.</li>
+   <li>Sin LangChain ni CrewAI a propósito: cada paso es visible, debuggeable y defendible.</li>
+   <li>Alternativa <strong>Ollama local</strong> documentada para código que no puede salir de la empresa.</li>
+   <li>Tres interfaces: <strong>CLI</strong>, <strong>API REST</strong> con Swagger y frontend React. Suite de más de 16 tests con bugs expuestos a propósito como escenarios de demo.</li>
+  </ul>
+  <div class="foot">
+   <div class="tags"><span>Python</span><span>FastAPI</span><span>Groq · Llama 3.3</span><span>Pydantic</span><span>pytest</span><span>ruff</span><span>React 18</span><span>Vite</span><span>Multi-agente</span></div>
+   <div class="lks"><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-" target="_blank" rel="noopener noreferrer">Ver repositorio →</a><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-/blob/main/decisions.md" target="_blank" rel="noopener noreferrer">Leer documento de decisiones →</a></div>
+  </div>
+ </article>
+
+ <div class="principles rv">
+  <div><h4>Lo crítico no depende del LLM</h4><p>Las reglas que bloquean un merge son determinísticas y auditables. El modelo explica la decisión, no la toma.</p></div>
+  <div><h4>Validar con tests, no con fe</h4><p>Un fix generado solo vale si los tests pasan. La validación corre aparte del modelo.</p></div>
+  <div><h4>Contratos estrictos</h4><p>JSON mode, schemas con Pydantic y prompts con los tests como contexto para obtener respuestas predecibles.</p></div>
+  <div><h4>Costo, latencia y privacidad</h4><p>Modelo de fallback, caché y opción local con Ollama: cada tradeoff está explícito y documentado.</p></div>
+  <div><h4>Agentes y RAG</h4><p>Agentes que usan herramientas y consultan datos propios antes de responder. Formación en IA generativa y agentes de Copilot.</p></div>
+  <div><h4>IA en el día a día</h4><p>Escribo prompts de sistema (skills) para que los agentes respeten reglas de UX, accesibilidad y validación. Copilot hace el boilerplate; la arquitectura y las decisiones son mías.</p></div>
+ </div>
+</div></section>
+
+<!-- PROYECTOS -->
+<section id="proyectos"><div class="wrap">
+ <div class="head rv">
+  <div>
+   <span class="kicker">06 / Proyectos</span>
+   <h2>Proyectos propios y académicos</h2>
+   <p class="sub">Desde sistemas en producción para clientes reales hasta trabajos de facultad sobre redes y sistemas distribuidos. Todo el código público está en <a href="https://github.com/Santicof" target="_blank" rel="noopener noreferrer">github.com/Santicof</a>.</p>
+  </div>
+  <div class="filters" role="group" aria-label="Filtrar proyectos">
+   <button type="button" data-f="all" aria-pressed="true">Todos</button>
+   <button type="button" data-f="ia" aria-pressed="false">IA</button>
+   <button type="button" data-f="backend" aria-pressed="false">Backend</button>
+   <button type="button" data-f="full" aria-pressed="false">Full stack</button>
+   <button type="button" data-f="front" aria-pressed="false">Frontend</button>
+   <button type="button" data-f="redes" aria-pressed="false">Redes</button>
+   <button type="button" data-f="poo" aria-pressed="false">Fundamentos</button>
+  </div>
+ </div>
+
+ <div class="grid" id="pgrid">
+  <article class="card feat span2 rv" data-cat="full backend">
+   <span class="badge live">Cliente real</span>
+   <div class="meta"><b>2026</b><span>Consultorio Integral Psique, Monte Grande</span></div>
+   <h3>Sistema de turnos para consultorio psicológico</h3>
+   <p>Plataforma web completa para que pacientes reserven turnos online con los profesionales del consultorio, que gestiona la agenda, los pacientes fijos y los días no laborables desde un panel de administración.</p>
+   <ul>
+    <li><strong>Spring Boot 3 + Java 17</strong> en capas (controllers, services, repositories, DTOs) sirviendo la API REST y el SPA de React empaquetado en el mismo JAR.</li>
+    <li><strong>Integración con Google Calendar API v3</strong>: OAuth2, eventos recurrentes para pacientes fijos, sincronización bidireccional que reconcilia turnos movidos o cancelados en Google y canales de notificaciones push (webhooks).</li>
+    <li>Modalidad virtual / presencial, colores por profesional y calendario interactivo con disponibilidad en tiempo real.</li>
+    <li>Contraseñas con <strong>BCrypt</strong> (con migración automática de credenciales viejas), rate limiting en el login y job de <strong>retención de datos</strong> que depura turnos antiguos.</li>
+    <li>Infra propia en <strong>Oracle Cloud</strong>: Docker multi-stage, Docker Compose con PostgreSQL 16, Nginx como reverse proxy, <strong>Let's Encrypt</strong> con renovación automática y HSTS, scripts de backup y <strong>deploy continuo con GitHub Actions</strong> por SSH. Alternativa configurada en Railway.</li>
+   </ul>
+   <div class="foot">
+    <div class="tags"><span>Java 17</span><span>Spring Boot 3</span><span>Spring Security</span><span>JPA</span><span>PostgreSQL 16</span><span>React 18</span><span>Vite</span><span>Google Calendar API</span><span>OAuth2</span><span>Docker</span><span>Nginx</span><span>Let's Encrypt</span><span>GitHub Actions</span><span>Oracle Cloud</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/Aplicacion-Para-Consultorio-Psicologico" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card feat span2 rv" data-cat="full backend ia">
+   <span class="badge live">En producción</span>
+   <div class="meta"><b>2026</b><span>Fantasy fútbol · ligas amateur de Canning · 51 commits</span></div>
+   <h3>PANDA: fantasy fútbol para torneos amateur</h3>
+   <p>Plataforma donde los jugadores arman su equipo en una cancha táctica, suman puntos según las estadísticas reales de cada fecha y compiten en un ranking con premios. Arrancó como Google Apps Script + Sheets y la <strong>migré a un stack escalable</strong> que hoy está en producción.</p>
+   <ul>
+    <li><strong>Next.js 16 full-stack</strong> (App Router): frontend y API routes en el mismo proyecto, deploy automático en Vercel.</li>
+    <li><strong>PostgreSQL en Supabase</strong> con SQL crudo (sin ORM) y pool de conexiones ajustado para serverless.</li>
+    <li>Motor de puntaje centralizado y cubierto con <strong>tests en Vitest</strong>.</li>
+    <li>Panel admin: carga de fechas, publicar/despublicar de forma reversible e <strong>import/export de estadísticas en Excel</strong>.</li>
+    <li>Seguridad: JWT en cookie HttpOnly, contraseñas con bcrypt, validación de inputs con <strong>Zod</strong> y scripts propios de auditoría OWASP y QA.</li>
+    <li>Desarrollo con agentes de IA guiados por <code>AGENTS.md</code> y memoria de proyecto con decisiones y bugs resueltos.</li>
+   </ul>
+   <div class="foot">
+    <div class="tags"><span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>Tailwind CSS 4</span><span>PostgreSQL</span><span>Supabase</span><span>JWT</span><span>Zod</span><span>Vitest</span><span>Resend</span><span>Vercel</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/vprinacerai/Panda" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="front ia">
+   <div class="meta"><b>2026</b><span>Landing institucional</span></div>
+   <h3>Landing Consultorio Integral Psique</h3>
+   <p>Sitio institucional del consultorio, complementario al sistema de turnos: servicios, enfoque de trabajo, equipo, galería, preguntas frecuentes y contacto directo por WhatsApp.</p>
+   <ul><li>SEO con Open Graph y datos estructurados schema.org (<code>MedicalClinic</code>)</li><li>Accesibilidad: WCAG AA, aria-labels y <code>prefers-reduced-motion</code></li><li>Desarrollada con un agente de IA guiado por un prompt de sistema propio (reglas de UX, contenido de salud y checklist de validación)</li><li>Deploy continuo en Vercel desde <code>main</code></li></ul>
+   <div class="foot">
+    <div class="tags"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS 4</span><span>ESLint</span><span>Vercel</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/landing-somospsiques" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="full backend">
+   <div class="meta"><b>2026</b><span>Producto · en equipo con Dante Lugo</span></div>
+   <h3>Shift.ya</h3>
+   <p>El sistema de turnos llevado a producto: la misma base probada con un cliente real, pensada para ofrecerse a otros consultorios.</p>
+   <ul><li>Spring Boot 3 + React con Google Calendar</li><li>Docker, Nginx y CI/CD con GitHub Actions</li><li>Desarrollo colaborativo con Git</li></ul>
+   <div class="foot">
+    <div class="tags"><span>Spring Boot</span><span>React</span><span>PostgreSQL</span><span>Docker</span><span>SaaS</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/Shift.ya" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="ia backend">
+   <div class="meta"><b>2026</b><span>Reto técnico de selección</span></div>
+   <h3>E-commerce AI Agent System</h3>
+   <p>Pipeline de dos agentes (BugDetector y Gate) que detecta bugs, genera fixes validados con pytest y decide go / warn / no-go. Detalle completo en la sección de IA.</p>
+   <div class="foot">
+    <div class="tags"><span>Python</span><span>FastAPI</span><span>LLMs</span><span>Agentes</span><span>pytest</span></div>
+    <div class="lks"><a class="lk" href="#ia">Ver detalle ↑</a><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="full backend">
+   <div class="meta"><b>2025</b><span>Trabajo Final Integrador · UNLa</span></div>
+   <h3>Planning Board académico</h3>
+   <p>Mi tesis de grado: un tablero visual web para planificar horarios académicos y asignar docentes a materias y comisiones.</p>
+   <ul><li>Backend Spring Boot con API REST</li><li>Frontend React + TypeScript</li><li>Entorno completo con Docker Compose</li></ul>
+   <div class="foot">
+    <div class="tags"><span>Spring Boot</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker Compose</span></div>
+    <span class="priv">Código académico · demo a pedido</span>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="backend redes">
+   <div class="meta"><b>2024</b><span>Sistemas distribuidos · equipo de 3</span></div>
+   <h3>Sistema de stock con gRPC</h3>
+   <p>Un cliente se comunica por gRPC con un servidor que provee los datos de stock de los locales. Contratos definidos en Protocol Buffers.</p>
+   <ul><li>Servidor <strong>.NET 8</strong> con Grpc.AspNetCore sobre HTTP/2</li><li>Arquitectura en capas (Application / Domain / Infrastructure) con <strong>MediatR</strong> estilo CQRS</li><li>Repositorio genérico con <strong>EF Core 8</strong> y SQL Server</li><li>Cliente en Python con grpcio</li></ul>
+   <div class="foot">
+    <div class="tags"><span>C#</span><span>.NET 8</span><span>gRPC</span><span>Protobuf</span><span>MediatR</span><span>EF Core</span><span>SQL Server</span><span>Python</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/grpc-Stock-System-Grupo-4" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="backend">
+   <div class="meta"><b>2024</b><span>Modelado de datos</span></div>
+   <h3>API de turnos médicos</h3>
+   <p>Base de una API en .NET 7 para que un paciente reserve turnos con un médico: modelo relacional de médicos, pacientes, especialidades y turnos con migraciones code-first.</p>
+   <div class="foot">
+    <div class="tags"><span>C#</span><span>.NET 7</span><span>EF Core</span><span>Migraciones</span><span>SQL Server</span><span>Swagger</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/Api-Turnos" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="backend full">
+   <div class="meta"><b>2023</b><span>Orientación a Objetos 2 · UNLa · equipo de 4</span></div>
+   <h3>Smart City: gestión de dispositivos IoT</h3>
+   <p>Aplicación web para administrar los dispositivos inteligentes de un campus (alumbrado, riego, estacionamiento y climatización), registrar sus métricas y generar eventos.</p>
+   <ul><li>Mi parte: dispositivo de estacionamiento, métricas y eventos en todas las capas, y controllers y vistas de administración</li><li>Login con Spring Security, BCrypt y seguridad por método</li><li>Herencia de entidades con JPA y trabajo en equipo con pull requests</li></ul>
+   <div class="foot">
+    <div class="tags"><span>Java 17</span><span>Spring Boot 3</span><span>Spring Security</span><span>Thymeleaf</span><span>JPA</span><span>MySQL</span><span>Bootstrap</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/GRUPO-18-OO2-2023" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="redes">
+   <div class="meta"><b>2024</b><span>Redes · cliente-servidor</span></div>
+   <h3>Generador de usuarios y contraseñas (Winsock)</h3>
+   <p>Aplicación cliente-servidor donde el servidor genera usuarios o contraseñas según lo que pida el cliente. Manejo de conexiones, errores y validación de entrada, con clientes en C++ y en Python.</p>
+   <div class="foot">
+    <div class="tags"><span>C++</span><span>Python</span><span>Winsock</span><span>Sockets</span><span>TCP</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/ServerPasswordNamesGenerator" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="redes">
+   <div class="meta"><b>2023</b><span>Redes · red local</span></div>
+   <h3>Servidor traductor TCP/IP con roles</h3>
+   <p>Servidor en C++ para varios clientes en red local que traduce palabras inglés ↔ español desde un diccionario en archivo.</p>
+   <ul><li>Login con roles ADMIN y CONSULTA</li><li>Bloqueo de cuenta tras 3 intentos fallidos y desbloqueo por el admin</li><li>Alta de usuarios y log de actividad del servidor</li></ul>
+   <div class="foot">
+    <div class="tags"><span>C++</span><span>Winsock</span><span>TCP/IP</span><span>Autenticación</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/Conection-WebSocket-Tcp-Ip-Translate" target="_blank" rel="noopener noreferrer">Servidor →</a><a class="lk" href="https://github.com/Santicof/Conexion-cliente-tcp-ip" target="_blank" rel="noopener noreferrer">Cliente →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="front">
+   <div class="meta"><b>2026</b><span>Emprendimiento · @san.nfc</span></div>
+   <h3>San NFC: tarjetas NFC y QR para negocios</h3>
+   <p>Herramientas para mi emprendimiento de tarjetas NFC: al acercar el celular, el cliente llega directo a la acción que el negocio necesita.</p>
+   <ul><li>Generador de enlaces de reseñas de Google y QR listos para imprimir</li><li>Páginas NFC que copian el alias de Mercado Pago al portapapeles para pagar al instante</li><li>Panel de administración de clientes y tarjetas</li></ul>
+   <div class="foot">
+    <div class="tags"><span>JavaScript</span><span>Node.js</span><span>NFC</span><span>QR</span><span>Google Maps</span></div>
+    <span class="priv">Repositorio privado</span>
+   </div>
+  </article>
+
+  <article class="card span2 rv" data-cat="poo">
+   <div class="meta"><b>2022</b><span>Fundamentos · Java</span></div>
+   <h3>Fundamentos de POO en Java</h3>
+   <p>Siete sistemas ABM construidos a partir de diagramas de clases: la base de modelado que hoy aplico en dominios reales.</p>
+   <div class="minilist">
+    <a href="https://github.com/Santicof/Gestion-de-Seguridad-con-orientacion-a-objetos" target="_blank" rel="noopener noreferrer">Gestión de seguridad ↗</a>
+    <a href="https://github.com/Santicof/ypf-proyecto-con-orientacion-objetos" target="_blank" rel="noopener noreferrer">Cuentas cliente YPF ↗</a>
+    <a href="https://github.com/Santicof/Stock-System-ObjectParadigm" target="_blank" rel="noopener noreferrer">Sistema de stock ↗</a>
+    <a href="https://github.com/Santicof/Sistema-de-Mercancias" target="_blank" rel="noopener noreferrer">Sistema de mercancías ↗</a>
+    <a href="https://github.com/Santicof/Sistema-de-Mensajeria-con-Orientacion-Objetos" target="_blank" rel="noopener noreferrer">Sistema de mensajería ↗</a>
+    <a href="https://github.com/Santicof/Sistema-de-contenido-audiovisual" target="_blank" rel="noopener noreferrer">Contenido audiovisual ↗</a>
+    <a href="https://github.com/Santicof/SistemasDeAsistencias" target="_blank" rel="noopener noreferrer">Sistema de asistencias ↗</a>
+   </div>
+   <div class="foot"><div class="tags"><span>Java</span><span>POO</span><span>UML</span><span>Colecciones</span></div></div>
+  </article>
+ </div>
+</div></section>
+
+<!-- DOCENCIA -->
+<section id="docencia"><div class="wrap">
+ <div class="head rv">
+  <div>
+   <span class="kicker">07 / Docencia</span>
+   <h2>Profesor universitario</h2>
+   <p class="sub">Enseñar me obliga a entender las cosas a fondo, y esa misma claridad la llevo a los equipos con los que trabajo.</p>
+  </div>
+ </div>
+ <div class="two">
+  <div class="card rv" style="justify-content:center">
+   <p class="quote">“Si no lo podés explicar simple, todavía <em>no lo entendiste</em> del todo.”</p>
+  </div>
+  <div class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+   <h3>Universidad Nacional de Lanús</h3>
+   <p>Docente en materias de <strong>programación</strong> y de <strong>habilidades blandas</strong>. Acompaño a estudiantes desde la lógica de programación hasta la forma de comunicarse y trabajar en equipo.</p>
+   <ul><li>Lógica de programación y buenas prácticas</li><li>Comunicación, trabajo en equipo y liderazgo</li><li>Puente entre la facultad y la industria con ejemplos reales</li></ul>
+  </div>
+ </div>
+</div></section>
+
+<!-- CONTENIDO -->
+<section id="contenido"><div class="wrap">
+ <div class="head rv">
+  <div>
+   <span class="kicker">08 / Divulgación</span>
+   <h2>San Sistemas</h2>
+   <p class="sub">Humor tech en español, divulgación sobre IA y desarrollo, y un podcast para conversar con gente del medio.</p>
+  </div>
+  <div class="stats" style="margin:0;padding:0;border:0;grid-template-columns:auto"><div><b style="color:var(--hot)">56K+</b><span>comunidad de más de 56 mil personas en Instagram y TikTok</span></div></div>
+ </div>
+ <div class="grid">
+  <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div><h3>Reels y TikToks</h3><p>Divulgación sobre IA y desarrollo con formato POV y humor de oficina de sistemas.</p><div class="foot"><div class="tags"><span>Instagram</span><span>TikTok</span></div></div></article>
+  <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg></div><h3>Podcast “De Informáticos Para Informáticos”</h3><p>Entrevistas con colegas sobre tecnología, carrera profesional e inteligencia artificial. Los reels con subtítulos y títulos animados los genero por código con Remotion (React).</p><div class="foot"><div class="tags"><span>Podcast</span><span>Entrevistas</span><span>YouTube</span><span>Remotion</span></div></div></article>
+  <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div><h3>Por qué lo hago</h3><p>Comunicar tecnología es parte del trabajo de un ingeniero: documentar, explicar decisiones y enseñar al equipo.</p></article>
+ </div>
+ <div class="social rv" style="margin-top:1.6rem">
+  <a class="btn" href="https://www.instagram.com/san_sistemas" target="_blank" rel="noopener noreferrer">Instagram @san_sistemas</a>
+  <a class="btn" href="https://www.tiktok.com/@san_sistemas" target="_blank" rel="noopener noreferrer">TikTok @san_sistemas</a>
+  <a class="btn" href="https://www.youtube.com/results?search_query=San+Sistemas+De+Inform%C3%A1ticos+Para+Inform%C3%A1ticos" target="_blank" rel="noopener noreferrer">Podcast en YouTube</a>
+ </div>
+</div></section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact"><div class="wrap rv">
+ <span class="kicker">09 / Contacto</span>
+ <h2>¿Construimos algo?</h2>
+ <p class="sub">Busco roles de <strong>Backend Engineer</strong> o <strong>AI Engineer</strong> donde pueda diseñar sistemas distribuidos e integrar IA de forma seria. También me interesan charlas, clases y colaboraciones.</p>
+ <div class="looking tags"><span>.NET / C#</span><span>Java / Spring</span><span>Python / IA</span><span>Remoto o híbrido</span><span>Buenos Aires</span></div>
+ <div class="btns">
+  <a class="btn main" href="mailto:santiagobc826@gmail.com">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>santiagobc826@gmail.com</a>
+  <button class="btn" type="button" id="copyMail">Copiar email</button>
+  <a class="btn" href="https://www.linkedin.com/in/santiago-cofman-6961a5234/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a class="btn" href="https://github.com/Santicof" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a class="btn" href="assets/cv-santiago-cofman.png" download="CV-Santiago-Cofman.png">CV</a>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Santiago Bruno Cofman</span></div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+'use strict';
+var root=document.documentElement;
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var T={};
+function readTheme(){var s=getComputedStyle(root);['bg','surface','surface2','line','text','muted','accent','hot','gold'].forEach(function(k){T[k]=s.getPropertyValue('--'+k).trim();});}
+readTheme();
+
+function fit(c){var r=c.getBoundingClientRect(),d=Math.min(window.devicePixelRatio||1,2);c.width=Math.max(1,Math.round(r.width*d));c.height=Math.max(1,Math.round(r.height*d));var x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);return{w:r.width,h:r.height,x:x};}
+function rr(x,a,b,w,h,r){x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath();}
+function onVisible(el,cb){if(!('IntersectionObserver' in window)){cb(true);return;}new IntersectionObserver(function(es){cb(es[0].isIntersecting);}).observe(el);}
+
+/* theme */
+var themeBtn=document.getElementById('themeBtn');
+themeBtn.addEventListener('click',function(){var t=root.getAttribute('data-theme')==='light'?'dark':'light';root.setAttribute('data-theme',t);localStorage.setItem('theme',t);readTheme();window.dispatchEvent(new Event('themechange'));});
+
+/* rotating role */
+var roles=['Backend Engineer','AI Engineer','Docente universitario','Creador de contenido'],ri=0,roleEl=document.getElementById('role');
+if(!reduce){setInterval(function(){roleEl.style.opacity=0;setTimeout(function(){ri=(ri+1)%roles.length;roleEl.textContent=roles[ri];roleEl.style.opacity=1;},350);},2800);}
+
+/* hero graph */
+(function(){
+ var c=document.getElementById('graph'),tip=document.getElementById('graphTip'),def=tip.textContent;
+ var N=[
+  {n:'Kafka',t:'Bus de eventos: desacopla servicios y permite reprocesar mensajes.'},
+  {n:'.NET Orleans',t:'Actores virtuales para estado distribuido. Lo uso en Andreani.'},
+  {n:'Geo · Zonas',t:'Envíos geolocalizados y resueltos a zonas hexagonales.'},
+  {n:'Azure',t:'Infraestructura cloud y pipelines CI/CD con Azure DevOps.'},
+  {n:'MongoDB',t:'Persistencia de documentos para modelos flexibles.'},
+  {n:'Agentes IA',t:'LLMs con herramientas: detectan bugs, generan fixes y los validan con tests.'},
+  {n:'Spring Boot',t:'APIs REST en Java con Hibernate y PostgreSQL.'}
+ ];
+ N.forEach(function(p,i){if(!i){p.x=.5;p.y=.53;return;}var a=-Math.PI/2+(i-1)*2*Math.PI/(N.length-1);p.x=.5+.33*Math.cos(a);p.y=.53+.31*Math.sin(a);});
+ var E=[];for(var i=1;i<N.length;i++){E.push([i,0]);E.push([i,i===N.length-1?1:i+1]);}
+ var W,H,x,hov=-1,P=[],last=0,run=false,raf=0;
+ function size(){var f=fit(c);W=f.w;H=f.h;x=f.x;}
+ function pos(i){return[N[i].x*W,N[i].y*H];}
+ function draw(){
+  x.clearRect(0,0,W,H);
+  E.forEach(function(e){var a=pos(e[0]),b=pos(e[1]),on=hov===e[0]||hov===e[1];x.strokeStyle=on?T.accent:T.line;x.lineWidth=on?1.6:1;x.beginPath();x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.stroke();});
+  P.forEach(function(p){var e=p.d?[p.e[1],p.e[0]]:p.e,a=pos(e[0]),b=pos(e[1]),px=a[0]+(b[0]-a[0])*p.k,py=a[1]+(b[1]-a[1])*p.k;x.fillStyle=T.hot;x.shadowColor=T.hot;x.shadowBlur=12;x.beginPath();x.arc(px,py,3.2,0,7);x.fill();x.shadowBlur=0;});
+  x.font='600 13px Figtree, system-ui, sans-serif';x.textAlign='center';x.textBaseline='middle';
+  N.forEach(function(p,i){var q=pos(i),w=x.measureText(p.n).width+26,h=32,on=i===hov;x.fillStyle=on?T.accent:(i===0?T.hot:T.surface2);x.strokeStyle=on?T.accent:(i===0?T.hot:T.line);rr(x,q[0]-w/2,q[1]-h/2,w,h,16);x.fill();x.stroke();x.fillStyle=on?T.bg:(i===0?'#fff':T.text);x.fillText(p.n,q[0],q[1]+1);});
+ }
+ function frame(t){
+  if(!run)return;
+  if(t-last>380){last=t;P.push({e:E[Math.random()*E.length|0],k:0,d:Math.random()<.5,s:.007+Math.random()*.009});}
+  P.forEach(function(p){p.k+=p.s;});P=P.filter(function(p){return p.k<1;});
+  draw();raf=requestAnimationFrame(frame);
+ }
+ c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top,best=-1,bd=48;N.forEach(function(p,i){var q=pos(i),d=Math.hypot(q[0]-mx,q[1]-my);if(d<bd){bd=d;best=i;}});if(best!==hov){hov=best;tip.textContent=best<0?def:N[best].n+': '+N[best].t;if(reduce)draw();}});
+ c.addEventListener('pointerleave',function(){hov=-1;tip.textContent=def;if(reduce)draw();});
+ size();draw();
+ window.addEventListener('resize',function(){size();draw();});
+ window.addEventListener('themechange',draw);
+ if(!reduce)onVisible(c,function(v){run=v;cancelAnimationFrame(raf);if(v)raf=requestAnimationFrame(frame);});
+})();
+
+/* hex zoning demo */
+(function(){
+ var c=document.getElementById('hexmap');
+ var UO=[{n:'UO Lanús',c:'#3fb69a'},{n:'UO Avellaneda',c:'#ff6b4a'},{n:'UO Quilmes',c:'#e0a922'}];
+ var W,H,x,R,hw,vh,hexes=[],sel=0,mode='hex',poly=[],pins=[],paint=null,hover=null,lastW=0,run=false,raf=0,shipN=48210;
+ var logEl=document.getElementById('hexlog'),hint=document.getElementById('hexHint'),closeBtn=document.getElementById('closePoly'),uosEl=document.getElementById('uos');
+
+ UO.forEach(function(u,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',i===0?'true':'false');var sw=document.createElement('i');sw.style.background=u.c;var lbl=document.createElement('span');lbl.textContent=u.n;var cnt=document.createElement('em');cnt.textContent='0';b.appendChild(sw);b.appendChild(lbl);b.appendChild(cnt);b.addEventListener('click',function(){sel=i;Array.prototype.forEach.call(uosEl.children,function(el,j){el.setAttribute('aria-pressed',j===i?'true':'false');});});uosEl.appendChild(b);u.el=cnt;});
+
+ function hash(a,b){var h=Math.sin(a*127.1+b*311.7)*43758.5453;return h-Math.floor(h);}
+ function build(){
+  var f=fit(c);W=f.w;H=f.h;x=f.x;R=W<520?13:16;hw=Math.sqrt(3)*R;vh=1.5*R;hexes=[];
+  var rows=Math.ceil(H/vh)+1,cols=Math.ceil(W/hw)+1;
+  for(var r=0;r<rows;r++)for(var q=0;q<cols;q++)hexes.push({q:q,r:r,x:q*hw+(r%2?hw/2:0),y:r*vh,u:-1});
+  seed();
+ }
+ function seed(){
+  var ctr=[[.27,.32],[.72,.3],[.55,.74]],rad=Math.min(W,H)*.2;
+  hexes.forEach(function(h){h.u=-1;ctr.forEach(function(cc,i){var d=Math.hypot(h.x-cc[0]*W,h.y-cc[1]*H);if(d<rad*(.75+.45*hash(h.q,h.r))&&h.u<0)h.u=i;});});
+  counts();
+ }
+ function counts(){var n=[0,0,0];hexes.forEach(function(h){if(h.u>=0)n[h.u]++;});UO.forEach(function(u,i){u.el.textContent=n[i]+' hex';});}
+ function hexPath(cx,cy,r){x.beginPath();for(var i=0;i<6;i++){var a=Math.PI/180*(60*i-30);x.lineTo(cx+r*Math.cos(a),cy+r*Math.sin(a));}x.closePath();}
+ function nearest(px,py){var best=null,bd=1e9;hexes.forEach(function(h){var d=(h.x-px)*(h.x-px)+(h.y-py)*(h.y-py);if(d<bd){bd=d;best=h;}});return best;}
+ function inside(px,py,pts){var ins=false;for(var i=0,j=pts.length-1;i<pts.length;j=i++){var a=pts[i],b=pts[j];if(((a[1]>py)!==(b[1]>py))&&(px<(b[0]-a[0])*(py-a[1])/(b[1]-a[1])+a[0]))ins=!ins;}return ins;}
+ function bgMap(){
+  x.fillStyle=T.surface;x.fillRect(0,0,W,H);
+  x.strokeStyle='rgba(90,169,255,.28)';x.lineWidth=18;x.lineCap='round';x.beginPath();x.moveTo(W*.98,-10);x.bezierCurveTo(W*.85,H*.3,W*.98,H*.6,W*.9,H+10);x.stroke();
+  x.strokeStyle=T.line;x.lineWidth=3;
+  [[0,.2,1,.45],[0,.62,1,.55],[.4,0,.35,1],[.15,1,.8,0]].forEach(function(l){x.beginPath();x.moveTo(l[0]*W,l[1]*H);x.quadraticCurveTo(W*.5,H*.5+(l[1]-.5)*H*.3,l[2]*W,l[3]*H);x.stroke();});
+  x.lineWidth=1;
+ }
+ function draw(){
+  bgMap();
+  hexes.forEach(function(h){hexPath(h.x,h.y,R-1);if(h.u>=0){x.fillStyle=UO[h.u].c;x.globalAlpha=h===hover?.75:.42;x.fill();x.globalAlpha=1;}x.strokeStyle=h===hover?T.text:T.line;x.globalAlpha=h===hover?1:.55;x.stroke();x.globalAlpha=1;});
+  if(poly.length){x.strokeStyle=UO[sel].c;x.fillStyle=UO[sel].c;x.lineWidth=2;x.setLineDash([6,4]);x.beginPath();poly.forEach(function(p,i){i?x.lineTo(p[0],p[1]):x.moveTo(p[0],p[1]);});if(hover&&mode==='poly'&&hover.mx!=null)x.lineTo(hover.mx,hover.my);x.stroke();x.setLineDash([]);poly.forEach(function(p,i){x.beginPath();x.arc(p[0],p[1],i?4:6,0,7);x.fill();});x.lineWidth=1;}
+  pins.forEach(function(p){var k=Math.min(1,p.t),y=p.y-(1-k)*(1-k)*60;x.globalAlpha=k;if(k>=1){x.strokeStyle=p.u>=0?UO[p.u].c:T.hot;x.lineWidth=2;x.beginPath();x.arc(p.x,p.y,6+p.ring,0,7);x.globalAlpha=Math.max(0,1-p.ring/24);x.stroke();x.globalAlpha=1;x.lineWidth=1;}x.fillStyle=p.u>=0?UO[p.u].c:T.hot;x.beginPath();x.arc(p.x,y-12,7,0,7);x.fill();x.beginPath();x.moveTo(p.x-5,y-9);x.lineTo(p.x,y);x.lineTo(p.x+5,y-9);x.fill();x.fillStyle=T.surface;x.beginPath();x.arc(p.x,y-12,2.6,0,7);x.fill();x.globalAlpha=1;});
+ }
+ function frame(){if(!run)return;pins.forEach(function(p){if(p.t<1)p.t+=.06;else p.ring=(p.ring+.4)%24;});draw();raf=requestAnimationFrame(frame);}
+ function log(msg,warn){var li=document.createElement('li');li.textContent=msg;if(warn)li.className='warn';logEl.insertBefore(li,logEl.firstChild);while(logEl.children.length>5)logEl.removeChild(logEl.lastChild);}
+ function pt(e){var r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top];}
+ function cellId(h){return 'hx-'+(h.q*31+h.r*17+4096).toString(16)+'-'+h.r.toString(16).padStart(2,'0');}
+ function closePolygon(){
+  if(poly.length<3)return;var n=0;
+  hexes.forEach(function(h){if(inside(h.x,h.y,poly)){h.u=sel;n++;}});
+  log('Polígono de '+poly.length+' vértices → '+n+' hexágonos asignados a '+UO[sel].n);
+  poly=[];closeBtn.disabled=true;counts();if(reduce)draw();
+ }
+ c.addEventListener('pointerdown',function(e){
+  var p=pt(e);
+  if(mode==='hex'){var h=nearest(p[0],p[1]);if(!h)return;paint=h.u===sel?-1:sel;h.u=paint;try{c.setPointerCapture(e.pointerId);}catch(_){}counts();}
+  else{if(poly.length>=3&&Math.hypot(p[0]-poly[0][0],p[1]-poly[0][1])<14){closePolygon();}else{poly.push(p);closeBtn.disabled=poly.length<3;}}
+  if(reduce)draw();
+ });
+ c.addEventListener('pointermove',function(e){var p=pt(e),h=nearest(p[0],p[1]);hover=h;if(h){h.mx=p[0];h.my=p[1];}if(paint!==null&&h&&h.u!==paint){h.u=paint;counts();}if(reduce)draw();});
+ c.addEventListener('pointerup',function(){paint=null;});
+ c.addEventListener('pointerleave',function(){hover=null;paint=null;if(reduce)draw();});
+ c.addEventListener('dblclick',function(){if(mode==='poly')closePolygon();});
+ closeBtn.addEventListener('click',closePolygon);
+ document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){mode=b.getAttribute('data-mode');document.querySelectorAll('.seg button').forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});poly=[];closeBtn.disabled=true;hint.textContent=mode==='hex'?'Arrastrá para pintar hexágonos':'Hacé clic para marcar vértices · cerrá en el primero';if(reduce)draw();});});
+ document.getElementById('ship').addEventListener('click',function(){
+  var covered=hexes.filter(function(o){return o.u>=0&&o.x>R&&o.x<W-R&&o.y>R*2&&o.y<H-R;}),h;
+  // most shipments fall inside a zone; some don't, to show the "sin cobertura" case
+  if(covered.length&&Math.random()<.75)h=covered[Math.random()*covered.length|0];
+  else h=nearest(W*(.06+Math.random()*.88),H*(.08+Math.random()*.86));
+  var px=h.x,py=h.y;
+  var lat=(-34.66-(py/H)*.12).toFixed(4),lng=(-58.46+(px/W)*.16).toFixed(4),id='AND-'+(shipN++);
+  pins.push({x:h.x,y:h.y,t:reduce?1:0,ring:0,u:h.u});if(pins.length>6)pins.shift();
+  if(h.u>=0)log(id+' ('+lat+', '+lng+') → '+cellId(h)+' → '+UO[h.u].n+' · transportista T-'+(10+(h.q*7+h.r*3)%40));
+  else log(id+' ('+lat+', '+lng+') → '+cellId(h)+' → sin cobertura: requiere zona',true);
+  if(reduce)draw();
+ });
+ document.getElementById('resetMap').addEventListener('click',function(){poly=[];pins=[];closeBtn.disabled=true;seed();logEl.textContent='';log('Zonas reiniciadas');if(reduce)draw();});
+ build();draw();log('3 unidades operativas cargadas. Probá simular un envío.');
+ window.addEventListener('resize',function(){var w=c.getBoundingClientRect().width;if(Math.abs(w-lastW)>2){lastW=w;build();pins=[];poly=[];draw();}});
+ lastW=c.getBoundingClientRect().width;
+ window.addEventListener('themechange',draw);
+ if(!reduce)onVisible(c,function(v){run=v;cancelAnimationFrame(raf);if(v)raf=requestAnimationFrame(frame);});
+})();
+
+/* project filters */
+var fbtns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('#pgrid .card');
+fbtns.forEach(function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-f');fbtns.forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});cards.forEach(function(cd){var ok=f==='all'||cd.getAttribute('data-cat').split(' ').indexOf(f)>=0;cd.classList.toggle('hide',!ok);if(ok)cd.classList.add('in');});});});
+
+/* reveal on scroll */
+var rv=document.querySelectorAll('.rv');
+if(reduce||!('IntersectionObserver' in window)){rv.forEach(function(el){el.classList.add('in');});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});rv.forEach(function(el){io.observe(el);});}
+
+/* active nav link */
+var navLinks=document.querySelectorAll('.links a');
+if('IntersectionObserver' in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){navLinks.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});document.querySelectorAll('main section[id]').forEach(function(s){so.observe(s);});}
+
+/* copy email */
+var toast=document.getElementById('toast');
+function showToast(m){toast.textContent=m;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},2000);}
+document.getElementById('copyMail').addEventListener('click',function(){var m='santiagobc826@gmail.com';if(navigator.clipboard){navigator.clipboard.writeText(m).then(function(){showToast('Email copiado');},function(){location.href='mailto:'+m;});}else{location.href='mailto:'+m;}});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
