@@ -176,7 +176,7 @@ pre.code .c{color:var(--accent)}
 .filters button{border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:.42rem .9rem;border-radius:999px;cursor:pointer;font:600 .84rem Figtree,sans-serif}
 .filters button[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
 .card.hide{display:none}
-#pgrid{grid-auto-flow:dense}
+#pgrid,#agrid{grid-auto-flow:dense}
 .feat{background:linear-gradient(140deg,var(--surface),color-mix(in srgb,var(--accent) 9%,var(--surface)))}
 .badge{position:absolute;top:1.2rem;right:1.2rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:.2rem .55rem;border-radius:999px;background:var(--hot);color:#fff;letter-spacing:.03em}
 .badge.live{background:#2fae67}
@@ -319,7 +319,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div>
    <span class="kicker">01 / Sobre mí</span>
    <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1.2rem">Backend de día, IA siempre, docente por vocación.</h2>
-   <p>Soy <strong>Licenciado en Sistemas por la Universidad Nacional de Lanús</strong> y trabajo como <strong>Backend Developer .NET en el equipo de Cloud &amp; Data de Andreani</strong>, uno de los grupos logísticos más grandes de Argentina. Entré en 2023 como Analista DevOps automatizando despliegues en Azure y OpenShift, y hoy desarrollo los microservicios que modelan la base del flujo logístico: <strong>unidades operativas, zonas geográficas y la geolocalización de envíos</strong>.</p>
+   <p>Soy <strong>Licenciado en Sistemas por la Universidad Nacional de Lanús</strong> y trabajo como <strong>Backend Developer .NET en el área de Operations &amp; Innovation de Andreani</strong>, uno de los grupos logísticos más grandes de Argentina. Entré en 2023 como Analista DevOps automatizando despliegues en Azure y OpenShift, y hoy desarrollo los microservicios que modelan la base del flujo logístico: <strong>normalización y geocodificación de domicilios, unidades operativas, zonas H3, contratos y datos maestros</strong>.</p>
    <p>En paralelo construyo productos propios: sistemas de turnos en producción para consultorios reales y <strong>sistemas multi-agente con LLMs</strong> que analizan código, proponen fixes y los validan con tests. Me interesa la IA aplicada con criterio de ingeniería: salidas estructuradas, reglas auditables y validación real.</p>
    <p>Además soy <strong>docente universitario</strong> en materias de programación y habilidades blandas, y divulgo tecnología en <strong>San Sistemas</strong>, con reels y el podcast <em>“De Informáticos Para Informáticos”</em>.</p>
    <div class="facts">
@@ -342,7 +342,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <a class="btn" href="assets/cv-santiago-cofman.png" download="CV-Santiago-Cofman.png">Descargar CV</a>
  </div>
  <div class="tl">
-  <div class="row now rv"><time>Actualidad</time><div><h3>Backend Developer .NET · Cloud &amp; Data</h3><span class="org">Andreani Grupo Logístico</span><p>Microservicios distribuidos con .NET Orleans, C# y Azure sobre arquitectura orientada a eventos. Unidades operativas, carga de zonas con hexágonos o Google Maps y geolocalización de envíos. Owner del proyecto de contratos con empresas, con auditoría y manejo de datos sensibles.</p></div></div>
+  <div class="row now rv"><time>Actualidad</time><div><h3>Backend Developer .NET · Operations &amp; Innovation</h3><span class="org">Andreani Grupo Logístico</span><p>APIs de normalización y geocodificación de domicilios (MongoDB, cache multinivel, Google Geocoding), contratos, datos maestros y unidades operativas sobre Orleans. Automatización de zonas H3 con Python. Clean Architecture, CQRS, Docker, Helm y CI/CD. Owner del proyecto de contratos con empresas.</p></div></div>
   <div class="row rv"><time>En curso</time><div><h3>Docente universitario</h3><span class="org">Universidad Nacional de Lanús</span><p>Docencia en materias de programación y habilidades blandas.</p></div></div>
   <div class="row rv"><time>En curso</time><div><h3>Creador de contenido tecnológico</h3><span class="org">San Sistemas</span><p>Videos y podcast de divulgación sobre IA y desarrollo de software.</p></div></div>
   <div class="row rv"><time>2024</time><div><h3>Java Developer</h3><span class="org">Universidad Nacional de Lanús</span><p>Desarrollo web backend con Java y Spring Boot.</p></div></div>
@@ -363,9 +363,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   </div>
  </div>
  <div class="stack">
-  <div class="card rv"><h3><i></i>Backend</h3><div class="tags"><span class="core">C# / .NET</span><span class="core">.NET Orleans</span><span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>Entity Framework Core</span><span>MediatR / CQRS</span><span>Spring Security</span><span>Python / FastAPI</span><span>gRPC</span><span class="core">REST APIs</span><span>C++ / Sockets</span></div></div>
-  <div class="card rv"><h3><i style="background:var(--accent)"></i>Datos y mensajería</h3><div class="tags"><span class="core">Kafka</span><span>MongoDB</span><span>PostgreSQL</span><span>Supabase</span><span>MySQL</span><span>SQL Server</span><span>Google Calendar API</span><span class="core">Event-driven</span><span>Microservicios</span></div></div>
-  <div class="card rv"><h3><i style="background:var(--gold)"></i>Cloud y DevOps</h3><div class="tags"><span class="core">Azure</span><span class="core">Azure DevOps</span><span>OpenShift</span><span>Docker</span><span>Docker Compose</span><span>CI/CD</span><span>GitHub Actions</span><span>Nginx</span><span>Let's Encrypt</span><span>Oracle Cloud</span><span>Railway</span><span>Vercel</span><span>Linux</span><span>Git</span></div></div>
+  <div class="card rv"><h3><i></i>Backend</h3><div class="tags"><span class="core">C# / .NET</span><span class="core">ASP.NET Core</span><span class="core">.NET Orleans</span><span class="core">Clean Architecture</span><span class="core">MediatR / CQRS</span><span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>Entity Framework Core</span><span>Spring Security</span><span>Python / FastAPI</span><span>gRPC</span><span class="core">REST APIs</span><span>C++ / Sockets</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--accent)"></i>Datos y mensajería</h3><div class="tags"><span class="core">MongoDB</span><span class="core">H3 / geoespacial</span><span class="core">Google Geocoding</span><span class="core">Python / pandas</span><span>Kafka</span><span>PostgreSQL</span><span>Supabase</span><span>MySQL</span><span>SQL Server</span><span>Google Calendar API</span><span class="core">Event-driven</span><span>Microservicios</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--gold)"></i>Cloud y DevOps</h3><div class="tags"><span class="core">Azure</span><span class="core">Azure DevOps</span><span class="core">Docker</span><span class="core">Helm</span><span class="core">Azure AD B2C</span><span>Vault</span><span>Jira</span><span>OpenShift</span><span>Docker Compose</span><span>CI/CD</span><span>GitHub Actions</span><span>Nginx</span><span>Let's Encrypt</span><span>Oracle Cloud</span><span>Railway</span><span>Vercel</span><span>Linux</span><span>Git</span></div></div>
   <div class="card rv"><h3><i style="background:#9b8cff"></i>IA</h3><div class="tags"><span class="core">LLMs</span><span class="core">Agentes</span><span>RAG</span><span>Groq / Llama</span><span>Ollama</span><span>Pydantic</span><span>Prompt engineering</span><span>GitHub Copilot</span><span>IA generativa</span></div></div>
   <div class="card rv"><h3><i style="background:#5aa9ff"></i>Frontend</h3><div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span><span>Thymeleaf</span><span>HTML / CSS</span><span>SEO y accesibilidad</span></div></div>
   <div class="card rv"><h3><i style="background:var(--muted)"></i>Prácticas</h3><div class="tags"><span>Modelado de dominio</span><span>Arquitectura distribuida</span><span>Testing (pytest)</span><span>Metodologías ágiles</span><span>Code review</span><span>Liderazgo técnico</span><span>Redes TCP/IP</span><span>Geoespacial</span></div></div>
@@ -378,18 +378,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div>
    <span class="kicker">04 / Experiencia en producción</span>
    <h2>Andreani: la base del flujo logístico</h2>
-   <p class="sub">Desarrollo microservicios distribuidos con <strong>.NET Orleans, C#, Azure y arquitectura orientada a eventos</strong>. Mi foco es el dominio sobre el que se apoya toda la operación: las <strong>unidades operativas</strong>, que organizan a los transportistas y a la infraestructura, sus zonas de cobertura y la geolocalización de cada envío. Además soy <strong>owner del proyecto de contratos con empresas</strong>, donde la auditoría y el cuidado de datos sensibles son críticos.</p>
+   <p class="sub">Trabajo en el área de <strong>Operations &amp; Innovation</strong>, dentro de la plataforma logística de microservicios en <strong>.NET</strong>. Desarrollo los servicios de <strong>normalización y geocodificación de domicilios</strong>, las <strong>unidades operativas</strong> sobre Orleans, los <strong>contratos con empresas</strong> (soy owner del proyecto) y los <strong>datos maestros</strong>, y automatizo la carga de <strong>zonas H3</strong> con Python.</p>
   </div>
-  <div class="tags"><span>.NET</span><span>C#</span><span>Orleans</span><span>Azure</span><span>Kafka</span><span>Event-driven</span><span>Google Maps API</span></div>
+  <div class="tags"><span>.NET</span><span>C#</span><span>Orleans</span><span>MongoDB</span><span>H3</span><span>Python</span><span>Azure</span><span>Google Geocoding</span></div>
  </div>
 
  <div class="flow rv" aria-label="Flujo de geolocalización de un envío">
   <div>Envío<small>ingresa con dirección</small></div><span class="ar">→</span>
-  <div>Geocodificación<small>lat / lng</small></div><span class="ar">→</span>
-  <div class="hl">Celda hexagonal<small>índice espacial</small></div><span class="ar">→</span>
+  <div class="hl">Normalización<small>cache + clasificación</small></div><span class="ar">→</span>
+  <div class="hl">Geocodificación<small>Google · lat / lng</small></div><span class="ar">→</span>
+  <div class="hl">Celda H3<small>índice hexagonal</small></div><span class="ar">→</span>
   <div class="hl">Zona<small>hexágonos o polígono</small></div><span class="ar">→</span>
   <div class="hl">Unidad operativa<small>responsable</small></div><span class="ar">→</span>
-  <div>Transportista<small>última milla</small></div>
+  <div>Sucursal / transportista<small>última milla</small></div>
  </div>
 
  <div class="demo rv">
@@ -422,7 +423,34 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  </div>
  <p class="disclaimer rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>Demo interactiva hecha para este portfolio: reproduce el concepto, no usa datos ni código de Andreani. El código productivo es propiedad de la empresa.</p>
 
- <div class="grid">
+ <div class="grid" id="agrid">
+  <article class="card feat full rv">
+   <span class="badge">Core · Geo</span>
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+   <h3 style="font-size:1.6rem;max-width:30ch">Normalizador y geocodificador de domicilios</h3>
+   <p style="max-width:78ch">API que recibe la dirección de cada envío y la devuelve <strong>normalizada y con coordenadas</strong>. Es la base para asignar zona, sucursal y unidad operativa, así que tiene que ser rápida, precisa y barata en llamadas externas.</p>
+   <div class="pipe" aria-label="Pipeline de normalización">
+    <div><b>Dirección cruda</b><span>tal como llega con el envío</span></div>
+    <div><b>Cache multinivel</b><span>varias colecciones en MongoDB antes de salir a la red</span></div>
+    <div><b>Clasificación</b><span>manzana, barrio, ruta y otros formatos no estándar</span></div>
+    <div><b>Google Geocoding</b><span>solo si no hubo hit en cache</span></div>
+    <div><b>Domicilio + lat/lng</b><span>con marca de “dudoso” si la calidad es baja</span></div>
+   </div>
+   <div class="two" style="gap:1.4rem">
+    <ul>
+     <li>Agregué el <strong>flag de domicilio dudoso</strong> en la cache y endpoints para consultar y <strong>corregir domicilio y coordenadas por número de envío</strong>.</li>
+     <li>Desarrollé la <strong>asignación de sucursal según la dirección</strong>.</li>
+     <li>Correcciones de normalización en soporte productivo.</li>
+    </ul>
+    <ul>
+     <li><strong>Clean Architecture</strong> (Api / Application / Domain / Infrastructure) con <strong>CQRS</strong> y handlers.</li>
+     <li>Seguridad: API Key y <strong>Azure AD B2C</strong>, middlewares de auditoría y validación, y secretos fuera de la configuración y de los pipelines.</li>
+     <li>Deploy con Docker, <strong>Helm</strong> por ambiente y CI/CD.</li>
+    </ul>
+   </div>
+   <div class="foot"><div class="tags"><span>C#</span><span>ASP.NET Core</span><span>Clean Architecture</span><span>CQRS</span><span>MongoDB</span><span>Google Geocoding</span><span>Azure AD B2C</span><span>Docker</span><span>Helm</span><span>CI/CD</span></div></div>
+  </article>
+
   <article class="card feat full rv">
    <span class="badge">Project Owner</span>
    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -436,11 +464,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     </ul>
     <ul>
      <li><strong>Datos sensibles</strong>: acceso restringido por rol y exposición mínima de la información.</li>
-     <li>Integridad de la información contractual a lo largo de todo el flujo.</li>
-     <li>Mismo stack distribuido: .NET, Azure y comunicación por eventos.</li>
+     <li>API de <strong>contratos y solicitantes</strong> sobre <strong>Orleans</strong>, con permisos por endpoint y API keys.</li>
+     <li>Diagnóstico de diferencias en envíos asociados a contratos.</li>
     </ul>
    </div>
-   <div class="foot"><div class="tags"><span>Project Owner</span><span>Auditoría</span><span>Datos sensibles</span><span>Seguridad</span><span>Compliance</span><span>.NET</span><span>Azure</span></div></div>
+   <div class="foot"><div class="tags"><span>Project Owner</span><span>Auditoría</span><span>Datos sensibles</span><span>Seguridad</span><span>.NET</span><span>Orleans</span><span>API Keys</span></div></div>
   </article>
 
   <article class="card rv">
@@ -463,8 +491,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z"/><path d="M12 22V12M20.66 7L12 12 3.34 7"/></svg></div>
    <h3>Carga de zonas: hexágonos o Google</h3>
    <p>Soporte para definir la cobertura de cada unidad operativa de dos formas: cargando hexágonos directamente o dibujando polígonos con la API de Google Maps, que se convierten en celdas.</p>
-   <ul><li>Grilla hexagonal: áreas uniformes y vecinos equidistantes</li><li>Polígonos de Google Maps rellenados con hexágonos</li><li>Un único modelo de zona para ambas fuentes</li></ul>
-   <div class="foot"><div class="tags"><span>Hexágonos</span><span>Google Maps API</span><span>Zonificación</span></div></div>
+   <ul><li>Grilla hexagonal <strong>H3</strong>: áreas uniformes y vecinos equidistantes</li><li>Polígonos de Google Maps rellenados con hexágonos</li><li>Un único modelo de zona para ambas fuentes</li></ul>
+   <div class="foot"><div class="tags"><span>H3</span><span>Google Maps API</span><span>Zonificación</span></div></div>
   </article>
 
   <article class="card rv span2">
@@ -495,6 +523,46 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   </article>
 
   <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8.5M16 7.5l-3 8.5M8.5 6h7"/></svg></div>
+   <h3>Migración de Orleans</h3>
+   <p>Migré los grains del servicio de características de unidades operativas a una nueva versión de Orleans.</p>
+   <ul><li>Proyectos de grains, interfaces, servidor y tests</li><li>Resolví incompatibilidades de versiones en runtime (<code>MissingMethodException</code>)</li><li>Ajuste de Dockerfile y pipeline de CI</li></ul>
+   <div class="foot"><div class="tags"><span>Orleans</span><span>Grains</span><span>.NET</span><span>Docker</span><span>Tests</span></div></div>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+   <h3>Datos maestros</h3>
+   <p>Servicios de consulta sobre los que se apoyan otros equipos para saber cómo está armada la red logística.</p>
+   <ul><li>Consulta de mapeo logístico</li><li>Reasignación de unidades operativas</li><li>Validaciones B2B / B2C y troubleshooting de eventos en ambientes de prueba</li></ul>
+   <div class="foot"><div class="tags"><span>.NET</span><span>Master Data</span><span>Eventos</span><span>B2B / B2C</span></div></div>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 4h8M9 4v5l-5 9a2 2 0 0 0 1.7 3h12.6a2 2 0 0 0 1.7-3l-5-9V4"/></svg></div>
+   <h3>Automatización de zonas H3 con Python</h3>
+   <p>Scripts y notebooks que descargan, procesan y actualizan zonas y hexágonos H3 en MongoDB.</p>
+   <ul><li>Detección de superposiciones y de cambios entre versiones de zonas</li><li>Optimización del proceso de carga</li><li>Integración con el normalizador y respaldo con mongodump / mongosh</li></ul>
+   <div class="foot"><div class="tags"><span>Python</span><span>pandas</span><span>H3</span><span>MongoDB</span><span>ETL</span><span>Notebooks</span></div></div>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
+   <h3>Microservicios de unidades operativas</h3>
+   <p>Desarrollo y mantenimiento en los servicios de gestión, colaboradores, red logística y almacenamiento de la plataforma.</p>
+   <ul><li>Configuración por ambiente con Helm values</li><li>Secretos en vault, nunca en el repositorio</li><li>Seguimiento de pipelines hasta producción</li></ul>
+   <div class="foot"><div class="tags"><span>.NET</span><span>Microservicios</span><span>Helm</span><span>Vault</span><span>CI/CD</span></div></div>
+  </article>
+
+  <article class="card rv">
+   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M6 8.5v7M8.3 7.2c4 .8 6.7 2.3 7.5 3.6"/></svg></div>
+   <h3>Cómo trabajo en el equipo</h3>
+   <p>Un flujo ordenado para que cada cambio sea trazable de punta a punta.</p>
+   <ul><li>Una rama por ticket de Jira y PRs a develop</li><li>Code review, merges y reverts cuando hace falta</li><li>Verificación de estado de pipelines y despliegue por ambiente</li></ul>
+   <div class="foot"><div class="tags"><span>Git</span><span>Jira</span><span>Pull requests</span><span>Agile</span></div></div>
+  </article>
+
+  <article class="card rv">
    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.3 12.5 3.5 3.5 0 0 0 6.5 19z"/></svg></div>
    <h3>Despliegue en Azure y OpenShift</h3>
    <p>Mi primer rol en la empresa (Analista DevOps IT, 2023): automaticé el despliegue de microservicios con pipelines CI/CD.</p>
@@ -502,7 +570,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
    <div class="foot"><div class="tags"><span>Azure DevOps</span><span>OpenShift</span><span>CI/CD</span><span>Containers</span></div></div>
   </article>
 
-  <article class="card rv span2">
+  <article class="card rv full">
    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.3 11l9.4-4.8M7.3 13l9.4 4.8"/></svg></div>
    <h3>Arquitectura distribuida orientada a eventos</h3>
    <p>Los servicios se comunican publicando y consumiendo eventos, lo que los desacopla y permite reprocesar. Con <strong>Microsoft Orleans</strong> (modelo de actores virtuales) el estado se distribuye entre nodos sin manejar locks a mano, y todo corre en <strong>Azure</strong>.</p>
@@ -831,9 +899,9 @@ if(!reduce){setInterval(function(){roleEl.style.opacity=0;setTimeout(function(){
  var N=[
   {n:'Kafka',t:'Bus de eventos: desacopla servicios y permite reprocesar mensajes.'},
   {n:'.NET Orleans',t:'Actores virtuales para estado distribuido. Lo uso en Andreani.'},
-  {n:'Geo · Zonas',t:'Envíos geolocalizados y resueltos a zonas hexagonales.'},
+  {n:'Geo · Zonas',t:'Normalización y geocodificación de domicilios, resueltos a zonas H3.'},
   {n:'Azure',t:'Infraestructura cloud y pipelines CI/CD con Azure DevOps.'},
-  {n:'MongoDB',t:'Persistencia de documentos para modelos flexibles.'},
+  {n:'MongoDB',t:'Cache multinivel de domicilios y zonas H3.'},
   {n:'Agentes IA',t:'LLMs con herramientas: detectan bugs, generan fixes y los validan con tests.'},
   {n:'Spring Boot',t:'APIs REST en Java con Hibernate y PostgreSQL.'}
  ];
