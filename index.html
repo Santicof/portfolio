@@ -171,7 +171,7 @@ pre.code .c{color:var(--accent)}
 .feat{background:linear-gradient(140deg,var(--surface),color-mix(in srgb,var(--accent) 9%,var(--surface)))}
 .badge{position:absolute;top:1.2rem;right:1.2rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:.2rem .55rem;border-radius:999px;background:var(--hot);color:#fff;letter-spacing:.03em}
 .badge.live{background:#2fae67}
-.card:has(.badge) .meta{padding-right:7.5rem}
+.card:has(.badge) .meta,.card:has(.badge) h3{padding-right:7.5rem}
 .minilist{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.3rem .9rem;font-size:.88rem}
 .minilist a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--line);padding:.25rem 0}
 .minilist a:hover{color:var(--hot)}
@@ -279,7 +279,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
    <span class="status"><i></i>Abierto a nuevas oportunidades · Buenos Aires, AR</span>
    <h1>Santiago<br>Bruno <em>Cofman</em></h1>
    <p class="role" aria-live="polite"><span aria-hidden="true">&gt; </span><b id="role">Backend Engineer</b></p>
-   <p class="pitch">Licenciado en Sistemas. Diseño y opero <strong>microservicios distribuidos en .NET</strong> para la operación logística de <strong>Andreani</strong>, construyo <strong>agentes de IA</strong> que detectan y corrigen bugs, y enseño programación como <strong>docente universitario</strong> en la UNLa.</p>
+   <p class="pitch"><strong>Backend Engineer .NET en Andreani.</strong> Construyo microservicios para la red logística y agentes de IA. Docente universitario.</p>
    <div class="btns">
     <a class="btn main" href="#andreani">Ver mi trabajo
      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -291,16 +291,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
    </div>
    <div class="stats">
-    <div><b>2023→hoy</b><span>en Andreani, de DevOps a Backend</span></div>
-    <div><b>19</b><span>repositorios públicos en GitHub</span></div>
-    <div><b>56K+</b><span>personas en la comunidad de San Sistemas</span></div>
-    <div><b>B2</b><span>inglés, Cambridge Certificate</span></div>
+    <div><b>2023→hoy</b><span>en Andreani</span></div>
+    <div><b>19</b><span>repos públicos</span></div>
+    <div><b>56K+</b><span>comunidad tech</span></div>
+    <div><b>B2</b><span>inglés Cambridge</span></div>
    </div>
   </div>
   <div class="stage" aria-label="Diagrama animado de un sistema orientado a eventos con las tecnologías que uso">
    <div class="bar"><i></i><i></i><i></i><span>event-driven.topology</span></div>
    <canvas id="graph"></canvas>
-   <div class="tip" id="graphTip">Pasá el mouse por un nodo. Así se ve un sistema orientado a eventos: los servicios no se llaman entre sí, publican y consumen mensajes.</div>
+   <div class="tip" id="graphTip">Pasá el mouse por un nodo.</div>
   </div>
  </div>
 </div>
@@ -312,9 +312,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div>
    <span class="kicker">01 / Sobre mí</span>
    <h2 style="font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1.2rem">Backend de día, IA siempre, docente por vocación.</h2>
-   <p>Soy <strong>Licenciado en Sistemas por la Universidad Nacional de Lanús</strong> y trabajo como <strong>Backend Developer .NET en el área de Operations &amp; Innovation de Andreani</strong>, uno de los grupos logísticos más grandes de Argentina. Entré en 2023 como Analista DevOps automatizando despliegues en Azure y OpenShift, y hoy desarrollo los microservicios que modelan la base del flujo logístico: <strong>normalización y geocodificación de domicilios, unidades operativas, zonas H3, contratos y datos maestros</strong>.</p>
-   <p>En paralelo construyo productos propios: sistemas de turnos en producción para consultorios reales y <strong>sistemas multi-agente con LLMs</strong> que analizan código, proponen fixes y los validan con tests. Me interesa la IA aplicada con criterio de ingeniería: salidas estructuradas, reglas auditables y validación real.</p>
-   <p>Además soy <strong>docente universitario</strong> en materias de programación y habilidades blandas, y divulgo tecnología en <strong>San Sistemas</strong>, con reels y el podcast <em>“De Informáticos Para Informáticos”</em>.</p>
+   <p><strong>Licenciado en Sistemas (UNLa).</strong> Desde 2023 en Andreani: empecé en DevOps y hoy desarrollo microservicios .NET para la red logística. En paralelo creo productos con IA, enseño en la universidad y divulgo tecnología.</p>
    <div class="facts">
     <div class="fact"><small>Rol actual</small><span>Software Engineer · Backend &amp; IA · Andreani</span></div>
     <div class="fact"><small>Formación</small><span>Lic. en Sistemas · UNLa (2021–2025)</span></div>
@@ -335,14 +333,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <a class="btn" href="assets/cv-santiago-cofman.png" download="CV-Santiago-Cofman.png">Descargar CV</a>
  </div>
  <div class="tl">
-  <div class="row now rv"><time>Actualidad</time><div><h3>Backend Developer .NET · Operations &amp; Innovation</h3><span class="org">Andreani Grupo Logístico</span><p>APIs de normalización y geocodificación de domicilios (MongoDB, cache multinivel, Google Geocoding), contratos, datos maestros y unidades operativas sobre Orleans. Automatización de zonas H3 con Python. Clean Architecture, CQRS, Docker, Helm y CI/CD. Owner del proyecto de contratos con empresas.</p></div></div>
-  <div class="row rv"><time>En curso</time><div><h3>Docente universitario</h3><span class="org">Universidad Nacional de Lanús</span><p>Docencia en materias de programación y habilidades blandas.</p></div></div>
-  <div class="row rv"><time>En curso</time><div><h3>Creador de contenido tecnológico</h3><span class="org">San Sistemas</span><p>Videos y podcast de divulgación sobre IA y desarrollo de software.</p></div></div>
-  <div class="row rv"><time>2024</time><div><h3>Java Developer</h3><span class="org">Universidad Nacional de Lanús</span><p>Desarrollo web backend con Java y Spring Boot.</p></div></div>
-  <div class="row rv"><time>2023</time><div><h3>Analista DevOps IT</h3><span class="org">Andreani Grupo Logístico</span><p>Despliegue de microservicios en Azure y OpenShift con pipelines CI/CD.</p></div></div>
-  <div class="row rv"><time>2021 – 2025</time><div><h3>Licenciatura en Sistemas</h3><span class="org">Universidad Nacional de Lanús</span><p>Trabajo Final Integrador: Planning Board académico (Spring Boot + React).</p></div></div>
-  <div class="row rv"><time>2014 – 2023</time><div><h3>Inglés · Upper Intermediate B2</h3><span class="org">Oxford English Institute · Cambridge Certificate</span></div></div>
-  <div class="row rv"><time>Cursos</time><div><h3>Formación complementaria</h3><div class="courses tags"><span>IA generativa</span><span>Agentes Copilot</span><span>Spring Boot</span><span>React</span><span>Docker</span><span>SQL</span><span>Linux</span><span>Git</span><span>Liderazgo</span></div></div></div>
+  <div class="row now rv"><time>Actualidad</time><div><h3>Backend Developer .NET</h3><span class="org">Andreani · Operations &amp; Innovation</span><p>Domicilios, zonas H3, unidades operativas y contratos (owner).</p></div></div>
+  <div class="row rv"><time>En curso</time><div><h3>Docente universitario</h3><span class="org">UNLa</span></div></div>
+  <div class="row rv"><time>2024</time><div><h3>Java Developer</h3><span class="org">UNLa</span></div></div>
+  <div class="row rv"><time>2023</time><div><h3>Analista DevOps IT</h3><span class="org">Andreani</span><p>CI/CD en Azure y OpenShift.</p></div></div>
+  <div class="row rv"><time>2021 – 2025</time><div><h3>Licenciatura en Sistemas</h3><span class="org">UNLa</span></div></div>
+  <div class="row rv"><time>Idiomas</time><div><h3>Inglés B2</h3><span class="org">Cambridge Certificate</span></div></div>
  </div>
 </div></section>
 
@@ -352,16 +348,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div>
    <span class="kicker">03 / Stack</span>
    <h2>Herramientas que uso</h2>
-   <p class="sub">Resaltadas, las que uso todos los días en producción.</p>
+   <p class="sub">Resaltado: uso diario en producción.</p>
   </div>
  </div>
  <div class="stack">
-  <div class="card rv"><h3><i></i>Backend</h3><div class="tags"><span class="core">C# / .NET</span><span class="core">ASP.NET Core</span><span class="core">.NET Orleans</span><span class="core">Clean Architecture</span><span class="core">MediatR / CQRS</span><span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>Entity Framework Core</span><span>Spring Security</span><span>Python / FastAPI</span><span>gRPC</span><span class="core">REST APIs</span><span>C++ / Sockets</span></div></div>
-  <div class="card rv"><h3><i style="background:var(--accent)"></i>Datos y mensajería</h3><div class="tags"><span class="core">MongoDB</span><span class="core">H3 / geoespacial</span><span class="core">Google Geocoding</span><span class="core">Python / pandas</span><span>Kafka</span><span>PostgreSQL</span><span>Supabase</span><span>MySQL</span><span>SQL Server</span><span>Google Calendar API</span><span class="core">Event-driven</span><span>Microservicios</span></div></div>
-  <div class="card rv"><h3><i style="background:var(--gold)"></i>Cloud y DevOps</h3><div class="tags"><span class="core">Azure</span><span class="core">Azure DevOps</span><span class="core">Docker</span><span class="core">Helm</span><span class="core">Azure AD B2C</span><span>Vault</span><span>Jira</span><span>OpenShift</span><span>Docker Compose</span><span>CI/CD</span><span>GitHub Actions</span><span>Nginx</span><span>Let's Encrypt</span><span>Oracle Cloud</span><span>Railway</span><span>Vercel</span><span>Linux</span><span>Git</span></div></div>
-  <div class="card rv"><h3><i style="background:#9b8cff"></i>IA</h3><div class="tags"><span class="core">LLMs</span><span class="core">Agentes</span><span>RAG</span><span>Groq / Llama</span><span>Ollama</span><span>Pydantic</span><span>Prompt engineering</span><span>GitHub Copilot</span><span>IA generativa</span></div></div>
-  <div class="card rv"><h3><i style="background:#5aa9ff"></i>Frontend</h3><div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span><span>Thymeleaf</span><span>HTML / CSS</span><span>SEO y accesibilidad</span></div></div>
-  <div class="card rv"><h3><i style="background:var(--muted)"></i>Prácticas</h3><div class="tags"><span>Modelado de dominio</span><span>Arquitectura distribuida</span><span>Testing (pytest)</span><span>Metodologías ágiles</span><span>Code review</span><span>Liderazgo técnico</span><span>Redes TCP/IP</span><span>Geoespacial</span></div></div>
+  <div class="card rv"><h3><i></i>Backend</h3><div class="tags"><span class="core">C# / .NET</span><span class="core">ASP.NET Core</span><span class="core">Orleans</span><span class="core">CQRS</span><span>Java / Spring Boot</span><span>Python / FastAPI</span><span>gRPC</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--accent)"></i>Datos</h3><div class="tags"><span class="core">MongoDB</span><span class="core">H3 / Geo</span><span>PostgreSQL</span><span>SQL Server</span><span>Kafka</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--gold)"></i>Cloud y DevOps</h3><div class="tags"><span class="core">Azure</span><span class="core">Docker</span><span class="core">Helm</span><span class="core">CI/CD</span><span>GitHub Actions</span><span>Vercel</span></div></div>
+  <div class="card rv"><h3><i style="background:#9b8cff"></i>IA</h3><div class="tags"><span class="core">LLMs</span><span class="core">Agentes</span><span>RAG</span><span>Pydantic</span><span>Ollama</span></div></div>
+  <div class="card rv"><h3><i style="background:#5aa9ff"></i>Frontend</h3><div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span></div></div>
+  <div class="card rv"><h3><i style="background:var(--muted)"></i>Forma de trabajo</h3><div class="tags"><span class="core">Git / PRs</span><span>Jira</span><span>Agile</span><span>Testing</span><span>Code review</span></div></div>
  </div>
 </div></section>
 
@@ -371,7 +367,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  <div class="mg rv">
   <div class="mg-stage">
    <canvas id="mg" aria-hidden="true"></canvas>
-   <div class="mg-cap"><span class="kicker">04 / Andreani · Operations &amp; Innovation</span><p id="mgT" aria-live="off">Llega un envío con la dirección tal como la escribió el cliente.</p></div>
+   <div class="mg-cap"><span class="kicker">04 / Andreani · Operations &amp; Innovation</span><p id="mgT" aria-live="off">Llega un envío con la dirección del cliente.</p></div>
    <button class="icon-btn mg-play" id="mgPlay" type="button" aria-label="Pausar animación">
     <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
     <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M7 4.5v15l12-7.5z"/></svg>
@@ -386,160 +382,59 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
    <li><button type="button"><b>Última milla</b>sucursal y transportista</button></li>
   </ol>
  </div>
- <p class="disclaimer rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>Animación ilustrativa hecha para este portfolio: explica el concepto, no usa datos ni código de Andreani.</p>
+ <p class="disclaimer rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>Animación ilustrativa: no usa datos ni código de Andreani.</p>
 
  <div class="grid" id="agrid">
-  <article class="card feat full rv">
-   <span class="badge">Core · Geo</span>
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-   <h3 style="font-size:1.6rem;max-width:30ch">Normalizador y geocodificador de domicilios</h3>
-   <p style="max-width:78ch">API que recibe la dirección de cada envío y la devuelve <strong>normalizada y con coordenadas</strong>. Es la base para asignar zona, sucursal y unidad operativa, así que tiene que ser rápida, precisa y barata en llamadas externas.</p>
-   <div class="pipe" aria-label="Pipeline de normalización">
-    <div><b>Dirección cruda</b><span>tal como llega con el envío</span></div>
-    <div><b>Cache multinivel</b><span>varias colecciones en MongoDB antes de salir a la red</span></div>
-    <div><b>Clasificación</b><span>manzana, barrio, ruta y otros formatos no estándar</span></div>
-    <div><b>Google Geocoding</b><span>solo si no hubo hit en cache</span></div>
-    <div><b>Domicilio + lat/lng</b><span>con marca de “dudoso” si la calidad es baja</span></div>
-   </div>
-   <div class="two" style="gap:1.4rem">
-    <ul>
-     <li>Agregué el <strong>flag de domicilio dudoso</strong> en la cache y endpoints para consultar y <strong>corregir domicilio y coordenadas por número de envío</strong>.</li>
-     <li>Desarrollé la <strong>asignación de sucursal según la dirección</strong>.</li>
-     <li>Correcciones de normalización en soporte productivo.</li>
-    </ul>
-    <ul>
-     <li><strong>Clean Architecture</strong> (Api / Application / Domain / Infrastructure) con <strong>CQRS</strong> y handlers.</li>
-     <li>Seguridad: API Key y <strong>Azure AD B2C</strong>, middlewares de auditoría y validación, y secretos fuera de la configuración y de los pipelines.</li>
-     <li>Deploy con Docker, <strong>Helm</strong> por ambiente y CI/CD.</li>
-    </ul>
-   </div>
-   <div class="foot"><div class="tags"><span>C#</span><span>ASP.NET Core</span><span>Clean Architecture</span><span>CQRS</span><span>MongoDB</span><span>Google Geocoding</span><span>Azure AD B2C</span><span>Docker</span><span>Helm</span><span>CI/CD</span></div></div>
+  <article class="card feat span2 rv">
+   <span class="badge">Core</span>
+   <h3>Normalizador de domicilios</h3>
+   <p>Convierte la dirección de cada envío en un domicilio normalizado con coordenadas.</p>
+   <ul><li>Cache multinivel en MongoDB: menos llamadas a Google</li><li>Marca de domicilio dudoso y corrección por envío</li><li>Asignación de sucursal según la dirección</li></ul>
+   <div class="foot"><div class="tags"><span>.NET</span><span>CQRS</span><span>MongoDB</span><span>Google Geocoding</span></div></div>
   </article>
 
-  <article class="card feat full rv">
-   <span class="badge">Project Owner</span>
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
-   <h3 style="font-size:1.6rem;max-width:30ch">Plataforma de contratos con empresas: auditoría y datos sensibles</h3>
-   <p style="max-width:78ch">Soy el <strong>owner del proyecto</strong> por el que pasan los contratos de las empresas que trabajan con Andreani. Por la información que maneja, cada decisión técnica se toma pensando en dos cosas: que <strong>todo quede auditado</strong> y que los <strong>datos sensibles</strong> estén protegidos.</p>
-   <div class="two" style="gap:1.4rem">
-    <ul>
-     <li><strong>Ownership end-to-end</strong>: definición técnica, priorización y responsabilidad sobre lo que llega a producción.</li>
-     <li><strong>Trazabilidad y auditoría</strong>: registro de quién hizo qué cambio, cuándo y sobre qué contrato.</li>
-     <li>Interlocutor entre negocio, legal/compliance y el equipo técnico.</li>
-    </ul>
-    <ul>
-     <li><strong>Datos sensibles</strong>: acceso restringido por rol y exposición mínima de la información.</li>
-     <li>API de <strong>contratos y solicitantes</strong> sobre <strong>Orleans</strong>, con permisos por endpoint y API keys.</li>
-     <li>Diagnóstico de diferencias en envíos asociados a contratos.</li>
-    </ul>
-   </div>
-   <div class="foot"><div class="tags"><span>Project Owner</span><span>Auditoría</span><span>Datos sensibles</span><span>Seguridad</span><span>.NET</span><span>Orleans</span><span>API Keys</span></div></div>
+  <article class="card feat rv">
+   <span class="badge">Owner</span>
+   <h3>Contratos con empresas</h3>
+   <p>Owner del proyecto por donde pasan los contratos de los clientes.</p>
+   <ul><li>Auditoría de cada cambio</li><li>Protección de datos sensibles</li></ul>
+   <div class="foot"><div class="tags"><span>Orleans</span><span>Seguridad</span><span>Auditoría</span></div></div>
   </article>
 
   <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-   <h3>Geolocalización de envíos</h3>
-   <p>Cada envío se ubica en el mapa y se resuelve a qué zona y a qué unidad operativa pertenece. Es lo que permite asignarlo al transportista correcto y planificar la última milla.</p>
-   <ul><li>Resolución coordenada → celda → zona → unidad operativa</li><li>Servicio desacoplado que consume y publica eventos</li><li>Pensado para alto volumen de envíos diarios</li></ul>
-   <div class="foot"><div class="tags"><span>Geolocalización</span><span>Microservicios</span><span>.NET</span><span>Eventos</span></div></div>
+   <h3>Zonas H3</h3>
+   <p>Carga de zonas por hexágonos o polígonos de Google, automatizada con Python.</p>
+   <div class="foot"><div class="tags"><span>H3</span><span>Python</span><span>MongoDB</span></div></div>
   </article>
 
   <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v7.5H14M10 6.5h4"/></svg></div>
-   <h3>CRUD de unidades operativas</h3>
-   <p>Alta, edición y baja de unidades operativas con sus características, y CRUDs anidados que cuelgan de cada una. Es el modelo sobre el que se apoyan transportistas e infraestructura.</p>
-   <ul><li>Modelado de dominio con la unidad operativa como agregado raíz</li><li>Recursos anidados: características, zonas, transportistas</li><li>Validaciones de negocio e integridad entre entidades</li></ul>
-   <div class="foot"><div class="tags"><span>API REST</span><span>CRUD anidado</span><span>Modelado de dominio</span></div></div>
+   <h3>Unidades operativas</h3>
+   <p>CRUD con recursos anidados y microservicios de la red logística.</p>
+   <div class="foot"><div class="tags"><span>.NET</span><span>Microservicios</span><span>Helm</span></div></div>
   </article>
 
   <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z"/><path d="M12 22V12M20.66 7L12 12 3.34 7"/></svg></div>
-   <h3>Carga de zonas: hexágonos o Google</h3>
-   <p>Soporte para definir la cobertura de cada unidad operativa de dos formas: cargando hexágonos directamente o dibujando polígonos con la API de Google Maps, que se convierten en celdas.</p>
-   <ul><li>Grilla hexagonal <strong>H3</strong>: áreas uniformes y vecinos equidistantes</li><li>Polígonos de Google Maps rellenados con hexágonos</li><li>Un único modelo de zona para ambas fuentes</li></ul>
-   <div class="foot"><div class="tags"><span>H3</span><span>Google Maps API</span><span>Zonificación</span></div></div>
-  </article>
-
-  <article class="card rv span2">
-   <h3>Modelo de dominio</h3>
-   <p>Cómo se organiza la información alrededor de una unidad operativa.</p>
-<pre class="tree" aria-label="Árbol del modelo de dominio"><b>UnidadOperativa</b>            <em># agregado raíz · CRUD</em>
-├── Caracteristicas[]       <em># CRUD anidado</em>
-├── Zonas[]                 <em># CRUD anidado</em>
-│   ├── tipo: hexagonos      → celdas[]
-│   └── tipo: poligono       → vertices[] (Google Maps) → celdas[]
-├── Transportistas[]        <em># quienes operan la zona</em>
-└── Infraestructura[]       <em># sucursales, centros, plataformas</em>
-
-<b>Envio</b> ── geolocalizar() ──▶ celda ──▶ zona ──▶ <b>UnidadOperativa</b></pre>
-  </article>
-
-  <article class="card rv">
-   <h3>Contrato de la API</h3>
-   <p>Forma ilustrativa de los recursos anidados.</p>
-<pre class="code"><span class="m">GET</span>    <span class="p">/unidades-operativas</span>
-<span class="m">POST</span>   <span class="p">/unidades-operativas</span>
-<span class="m">PUT</span>    <span class="p">/unidades-operativas/{id}</span>
-<span class="m">GET</span>    <span class="p">/unidades-operativas/{id}/caracteristicas</span>
-<span class="m">POST</span>   <span class="p">/unidades-operativas/{id}/zonas</span>
-       <span class="c">{ "tipo": "hexagonos", "celdas": [...] }</span>
-       <span class="c">{ "tipo": "poligono", "vertices": [...] }</span>
-<span class="m">POST</span>   <span class="p">/envios/{id}/geolocalizacion</span></pre>
-  </article>
-
-  <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l3 8.5M16 7.5l-3 8.5M8.5 6h7"/></svg></div>
    <h3>Migración de Orleans</h3>
-   <p>Migré los grains del servicio de características de unidades operativas a una nueva versión de Orleans.</p>
-   <ul><li>Proyectos de grains, interfaces, servidor y tests</li><li>Resolví incompatibilidades de versiones en runtime (<code>MissingMethodException</code>)</li><li>Ajuste de Dockerfile y pipeline de CI</li></ul>
-   <div class="foot"><div class="tags"><span>Orleans</span><span>Grains</span><span>.NET</span><span>Docker</span><span>Tests</span></div></div>
+   <p>Migré grains a una nueva versión y resolví incompatibilidades en runtime.</p>
+   <div class="foot"><div class="tags"><span>Orleans</span><span>Docker</span><span>CI</span></div></div>
   </article>
 
   <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
    <h3>Datos maestros</h3>
-   <p>Servicios de consulta sobre los que se apoyan otros equipos para saber cómo está armada la red logística.</p>
-   <ul><li>Consulta de mapeo logístico</li><li>Reasignación de unidades operativas</li><li>Validaciones B2B / B2C y troubleshooting de eventos en ambientes de prueba</li></ul>
-   <div class="foot"><div class="tags"><span>.NET</span><span>Master Data</span><span>Eventos</span><span>B2B / B2C</span></div></div>
+   <p>Servicios de mapeo logístico y reasignación de unidades operativas.</p>
+   <div class="foot"><div class="tags"><span>.NET</span><span>Eventos</span></div></div>
   </article>
 
   <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 4h8M9 4v5l-5 9a2 2 0 0 0 1.7 3h12.6a2 2 0 0 0 1.7-3l-5-9V4"/></svg></div>
-   <h3>Automatización de zonas H3 con Python</h3>
-   <p>Scripts y notebooks que descargan, procesan y actualizan zonas y hexágonos H3 en MongoDB.</p>
-   <ul><li>Detección de superposiciones y de cambios entre versiones de zonas</li><li>Optimización del proceso de carga</li><li>Integración con el normalizador y respaldo con mongodump / mongosh</li></ul>
-   <div class="foot"><div class="tags"><span>Python</span><span>pandas</span><span>H3</span><span>MongoDB</span><span>ETL</span><span>Notebooks</span></div></div>
+   <h3>DevOps (2023)</h3>
+   <p>Automaticé despliegues de microservicios en Azure y OpenShift.</p>
+   <div class="foot"><div class="tags"><span>Azure DevOps</span><span>OpenShift</span><span>CI/CD</span></div></div>
   </article>
 
   <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
-   <h3>Microservicios de unidades operativas</h3>
-   <p>Desarrollo y mantenimiento en los servicios de gestión, colaboradores, red logística y almacenamiento de la plataforma.</p>
-   <ul><li>Configuración por ambiente con Helm values</li><li>Secretos en vault, nunca en el repositorio</li><li>Seguimiento de pipelines hasta producción</li></ul>
-   <div class="foot"><div class="tags"><span>.NET</span><span>Microservicios</span><span>Helm</span><span>Vault</span><span>CI/CD</span></div></div>
-  </article>
-
-  <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M6 8.5v7M8.3 7.2c4 .8 6.7 2.3 7.5 3.6"/></svg></div>
-   <h3>Cómo trabajo en el equipo</h3>
-   <p>Un flujo ordenado para que cada cambio sea trazable de punta a punta.</p>
-   <ul><li>Una rama por ticket de Jira y PRs a develop</li><li>Code review, merges y reverts cuando hace falta</li><li>Verificación de estado de pipelines y despliegue por ambiente</li></ul>
-   <div class="foot"><div class="tags"><span>Git</span><span>Jira</span><span>Pull requests</span><span>Agile</span></div></div>
-  </article>
-
-  <article class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.3 12.5 3.5 3.5 0 0 0 6.5 19z"/></svg></div>
-   <h3>Despliegue en Azure y OpenShift</h3>
-   <p>Mi primer rol en la empresa (Analista DevOps IT, 2023): automaticé el despliegue de microservicios con pipelines CI/CD.</p>
-   <ul><li>Pipelines de build y release en Azure DevOps</li><li>Despliegues en Azure y OpenShift</li><li>La base que hoy uso como desarrollador</li></ul>
-   <div class="foot"><div class="tags"><span>Azure DevOps</span><span>OpenShift</span><span>CI/CD</span><span>Containers</span></div></div>
-  </article>
-
-  <article class="card rv full">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.3 11l9.4-4.8M7.3 13l9.4 4.8"/></svg></div>
-   <h3>Arquitectura distribuida orientada a eventos</h3>
-   <p>Los servicios se comunican publicando y consumiendo eventos, lo que los desacopla y permite reprocesar. Con <strong>Microsoft Orleans</strong> (modelo de actores virtuales) el estado se distribuye entre nodos sin manejar locks a mano, y todo corre en <strong>Azure</strong>.</p>
-   <div class="foot"><div class="tags"><span>.NET Orleans</span><span>Actores virtuales</span><span>Kafka</span><span>Azure</span><span>Escalabilidad horizontal</span></div></div>
+   <h3>Forma de trabajo</h3>
+   <p>Rama por ticket, PRs a develop y deploy por ambiente con Helm.</p>
+   <div class="foot"><div class="tags"><span>Git</span><span>Jira</span><span>Helm</span></div></div>
   </article>
  </div>
 </div></section>
@@ -550,44 +445,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div>
    <span class="kicker">05 / AI Engineering</span>
    <h2>IA con criterio de ingeniería</h2>
-   <p class="sub">No uso la IA como magia: la integro como un componente más del sistema, con contratos, validación y planes de contingencia.</p>
+   <p class="sub">La IA como un componente más: con validación, reglas y plan B.</p>
   </div>
  </div>
 
  <article class="card feat full rv" style="margin-bottom:2.4rem">
   <span class="badge">Destacado · IA</span>
-  <div class="meta"><b>2026</b><span>Python · FastAPI · Groq · React</span></div>
-  <h3 style="font-size:1.7rem;max-width:26ch">E-commerce AI Agent System: dos agentes que detectan, corrigen y deciden</h3>
-  <p style="max-width:75ch">Sistema multi-agente que analiza el código de un equipo de e-commerce, detecta bugs, genera un fix, <strong>lo valida corriendo pytest</strong> y decide si el cambio puede avanzar. Reemplaza una revisión manual de 15–30 minutos por un análisis de 7–15 segundos (menos de 0,1 s con caché).</p>
-  <div class="pipe" aria-label="Pipeline de agentes">
-   <div><b>Archivo .py</b><span>CLI, API REST o frontend</span></div>
-   <div><b>Orchestrator</b><span>coordina y acumula contexto, ~50 líneas de Python puro</span></div>
-   <div><b>BugDetectorAgent</b><span>LLM detecta → LLM genera fix → pytest antes/después</span></div>
-   <div><b>GateAgent</b><span>reglas determinísticas + LLM que explica la decisión</span></div>
-   <div><b>Veredicto</b><span>go / warn / no-go</span></div>
+  <h3 style="font-size:1.6rem">E-commerce AI Agent System</h3>
+  <p>Dos agentes que detectan bugs, generan el fix, lo validan con tests y deciden si el cambio puede mergearse.</p>
+  <div class="stats" style="margin:.4rem 0;padding:0;border:0;display:flex;flex-wrap:wrap;gap:1rem 2.5rem">
+   <div><b>15–30 min → 7–15 s</b><span>revisión manual vs. agente</span></div>
+   <div><b>2 agentes</b><span>detectar + decidir</span></div>
+   <div><b>0 frameworks</b><span>cada paso es auditable</span></div>
   </div>
-  <div class="verdicts"><span class="v-no">auth.py → BLOCK</span><span class="v-warn">cart.py → WARN</span><span class="v-ok">utils.py → APPROVE</span></div>
-  <ul>
-   <li>Salida estructurada con <strong>JSON mode + Pydantic</strong>: el schema se valida aunque el LLM varíe.</li>
-   <li><strong>Fallback automático</strong> de Llama 3.3 70B a Llama 3.1 8B ante rate limit (degradación controlada).</li>
-   <li>Caché por <strong>hash de contenido</strong>, no por nombre: si el archivo cambia, se invalida sola.</li>
-   <li>Sin LangChain ni CrewAI a propósito: cada paso es visible, debuggeable y defendible.</li>
-   <li>Alternativa <strong>Ollama local</strong> documentada para código que no puede salir de la empresa.</li>
-   <li>Tres interfaces: <strong>CLI</strong>, <strong>API REST</strong> con Swagger y frontend React. Suite de más de 16 tests con bugs expuestos a propósito como escenarios de demo.</li>
-  </ul>
+  <div class="pipe" aria-label="Pipeline de agentes">
+   <div><b>Archivo</b><span>CLI o API</span></div>
+   <div><b>Orchestrator</b><span>coordina</span></div>
+   <div><b>BugDetector</b><span>detecta y corrige</span></div>
+   <div><b>pytest</b><span>valida el fix</span></div>
+   <div><b>Gate</b><span>go / warn / no-go</span></div>
+  </div>
   <div class="foot">
-   <div class="tags"><span>Python</span><span>FastAPI</span><span>Groq · Llama 3.3</span><span>Pydantic</span><span>pytest</span><span>ruff</span><span>React 18</span><span>Vite</span><span>Multi-agente</span></div>
-   <div class="lks"><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-" target="_blank" rel="noopener noreferrer">Ver repositorio →</a><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-/blob/main/decisions.md" target="_blank" rel="noopener noreferrer">Leer documento de decisiones →</a></div>
+   <div class="tags"><span>Python</span><span>FastAPI</span><span>Llama 3.3</span><span>Pydantic</span><span>pytest</span><span>React</span></div>
+   <div class="lks"><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-" target="_blank" rel="noopener noreferrer">Ver repositorio →</a><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-/blob/main/decisions.md" target="_blank" rel="noopener noreferrer">Decisiones de diseño →</a></div>
   </div>
  </article>
 
  <div class="principles rv">
-  <div><h4>Lo crítico no depende del LLM</h4><p>Las reglas que bloquean un merge son determinísticas y auditables. El modelo explica la decisión, no la toma.</p></div>
-  <div><h4>Validar con tests, no con fe</h4><p>Un fix generado solo vale si los tests pasan. La validación corre aparte del modelo.</p></div>
-  <div><h4>Contratos estrictos</h4><p>JSON mode, schemas con Pydantic y prompts con los tests como contexto para obtener respuestas predecibles.</p></div>
-  <div><h4>Costo, latencia y privacidad</h4><p>Modelo de fallback, caché y opción local con Ollama: cada tradeoff está explícito y documentado.</p></div>
-  <div><h4>Agentes y RAG</h4><p>Agentes que usan herramientas y consultan datos propios antes de responder. Formación en IA generativa y agentes de Copilot.</p></div>
-  <div><h4>IA en el día a día</h4><p>Escribo prompts de sistema (skills) para que los agentes respeten reglas de UX, accesibilidad y validación. Copilot hace el boilerplate; la arquitectura y las decisiones son mías.</p></div>
+  <div><h4>Lo crítico no depende del LLM</h4><p>Las reglas deciden; el modelo explica.</p></div>
+  <div><h4>Validar con tests</h4><p>Un fix solo vale si los tests pasan.</p></div>
+  <div><h4>Costo y privacidad</h4><p>Fallback de modelo, caché y opción local.</p></div>
  </div>
 </div></section>
 
@@ -596,8 +483,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  <div class="head rv">
   <div>
    <span class="kicker">06 / Proyectos</span>
-   <h2>Proyectos propios y académicos</h2>
-   <p class="sub">Desde sistemas en producción para clientes reales hasta trabajos de facultad sobre redes y sistemas distribuidos. Todo el código público está en <a href="https://github.com/Santicof" target="_blank" rel="noopener noreferrer">github.com/Santicof</a>.</p>
+   <h2>Proyectos propios</h2>
+   <p class="sub">Código en <a href="https://github.com/Santicof" target="_blank" rel="noopener noreferrer">github.com/Santicof</a>.</p>
   </div>
   <div class="filters" role="group" aria-label="Filtrar proyectos">
    <button type="button" data-f="all" aria-pressed="true">Todos</button>
@@ -606,169 +493,102 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
    <button type="button" data-f="full" aria-pressed="false">Full stack</button>
    <button type="button" data-f="front" aria-pressed="false">Frontend</button>
    <button type="button" data-f="redes" aria-pressed="false">Redes</button>
-   <button type="button" data-f="poo" aria-pressed="false">Fundamentos</button>
   </div>
  </div>
 
  <div class="grid" id="pgrid">
   <article class="card feat span2 rv" data-cat="full backend">
    <span class="badge live">Cliente real</span>
-   <div class="meta"><b>2026</b><span>Consultorio Integral Psique, Monte Grande</span></div>
-   <h3>Sistema de turnos para consultorio psicológico</h3>
-   <p>Plataforma web completa para que pacientes reserven turnos online con los profesionales del consultorio, que gestiona la agenda, los pacientes fijos y los días no laborables desde un panel de administración.</p>
-   <ul>
-    <li><strong>Spring Boot 3 + Java 17</strong> en capas (controllers, services, repositories, DTOs) sirviendo la API REST y el SPA de React empaquetado en el mismo JAR.</li>
-    <li><strong>Integración con Google Calendar API v3</strong>: OAuth2, eventos recurrentes para pacientes fijos, sincronización bidireccional que reconcilia turnos movidos o cancelados en Google y canales de notificaciones push (webhooks).</li>
-    <li>Modalidad virtual / presencial, colores por profesional y calendario interactivo con disponibilidad en tiempo real.</li>
-    <li>Contraseñas con <strong>BCrypt</strong> (con migración automática de credenciales viejas), rate limiting en el login y job de <strong>retención de datos</strong> que depura turnos antiguos.</li>
-    <li>Infra propia en <strong>Oracle Cloud</strong>: Docker multi-stage, Docker Compose con PostgreSQL 16, Nginx como reverse proxy, <strong>Let's Encrypt</strong> con renovación automática y HSTS, scripts de backup y <strong>deploy continuo con GitHub Actions</strong> por SSH. Alternativa configurada en Railway.</li>
-   </ul>
+   <h3>Turnos para consultorio psicológico</h3>
+   <p>Reserva de turnos online sincronizada con Google Calendar.</p>
+   <ul><li>Spring Boot 3 + React en un solo deploy</li><li>Sync bidireccional con Google Calendar</li><li>Infra propia: Docker, Nginx, HTTPS y CI/CD</li></ul>
    <div class="foot">
-    <div class="tags"><span>Java 17</span><span>Spring Boot 3</span><span>Spring Security</span><span>JPA</span><span>PostgreSQL 16</span><span>React 18</span><span>Vite</span><span>Google Calendar API</span><span>OAuth2</span><span>Docker</span><span>Nginx</span><span>Let's Encrypt</span><span>GitHub Actions</span><span>Oracle Cloud</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/Aplicacion-Para-Consultorio-Psicologico" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+    <div class="tags"><span>Java</span><span>Spring Boot</span><span>React</span><span>PostgreSQL</span><span>Docker</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/Aplicacion-Para-Consultorio-Psicologico" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="front ia">
+   <h3>Landing del consultorio</h3>
+   <p>Sitio institucional con SEO y accesibilidad, hecho con un agente de IA.</p>
+   <div class="foot">
+    <div class="tags"><span>React</span><span>TypeScript</span><span>Tailwind</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/landing-somospsiques" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
    </div>
   </article>
 
   <article class="card feat span2 rv" data-cat="full backend ia">
    <span class="badge live">En producción</span>
-   <div class="meta"><b>2026</b><span>Fantasy fútbol · ligas amateur de Canning · 51 commits</span></div>
-   <h3>PANDA: fantasy fútbol para torneos amateur</h3>
-   <p>Plataforma donde los jugadores arman su equipo en una cancha táctica, suman puntos según las estadísticas reales de cada fecha y compiten en un ranking con premios. Arrancó como Google Apps Script + Sheets y la <strong>migré a un stack escalable</strong> que hoy está en producción.</p>
-   <ul>
-    <li><strong>Next.js 16 full-stack</strong> (App Router): frontend y API routes en el mismo proyecto, deploy automático en Vercel.</li>
-    <li><strong>PostgreSQL en Supabase</strong> con SQL crudo (sin ORM) y pool de conexiones ajustado para serverless.</li>
-    <li>Motor de puntaje centralizado y cubierto con <strong>tests en Vitest</strong>.</li>
-    <li>Panel admin: carga de fechas, publicar/despublicar de forma reversible e <strong>import/export de estadísticas en Excel</strong>.</li>
-    <li>Seguridad: JWT en cookie HttpOnly, contraseñas con bcrypt, validación de inputs con <strong>Zod</strong> y scripts propios de auditoría OWASP y QA.</li>
-    <li>Desarrollo con agentes de IA guiados por <code>AGENTS.md</code> y memoria de proyecto con decisiones y bugs resueltos.</li>
-   </ul>
+   <h3>PANDA · fantasy fútbol</h3>
+   <p>Ligas amateur: armás tu equipo y sumás puntos con estadísticas reales.</p>
+   <ul><li>Migré de Google Sheets a Next.js + PostgreSQL</li><li>Motor de puntaje con tests</li><li>Auth JWT, validación con Zod e import de Excel</li></ul>
    <div class="foot">
-    <div class="tags"><span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>Tailwind CSS 4</span><span>PostgreSQL</span><span>Supabase</span><span>JWT</span><span>Zod</span><span>Vitest</span><span>Resend</span><span>Vercel</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/vprinacerai/Panda" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
-   </div>
-  </article>
-
-  <article class="card rv" data-cat="front ia">
-   <div class="meta"><b>2026</b><span>Landing institucional</span></div>
-   <h3>Landing Consultorio Integral Psique</h3>
-   <p>Sitio institucional del consultorio, complementario al sistema de turnos: servicios, enfoque de trabajo, equipo, galería, preguntas frecuentes y contacto directo por WhatsApp.</p>
-   <ul><li>SEO con Open Graph y datos estructurados schema.org (<code>MedicalClinic</code>)</li><li>Accesibilidad: WCAG AA, aria-labels y <code>prefers-reduced-motion</code></li><li>Desarrollada con un agente de IA guiado por un prompt de sistema propio (reglas de UX, contenido de salud y checklist de validación)</li><li>Deploy continuo en Vercel desde <code>main</code></li></ul>
-   <div class="foot">
-    <div class="tags"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS 4</span><span>ESLint</span><span>Vercel</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/landing-somospsiques" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+    <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Vitest</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/vprinacerai/Panda" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
    </div>
   </article>
 
   <article class="card rv" data-cat="full backend">
-   <div class="meta"><b>2026</b><span>Producto · en equipo con Dante Lugo</span></div>
    <h3>Shift.ya</h3>
-   <p>El sistema de turnos llevado a producto: la misma base probada con un cliente real, pensada para ofrecerse a otros consultorios.</p>
-   <ul><li>Spring Boot 3 + React con Google Calendar</li><li>Docker, Nginx y CI/CD con GitHub Actions</li><li>Desarrollo colaborativo con Git</li></ul>
+   <p>El sistema de turnos convertido en producto para otros consultorios.</p>
    <div class="foot">
-    <div class="tags"><span>Spring Boot</span><span>React</span><span>PostgreSQL</span><span>Docker</span><span>SaaS</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/Shift.ya" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
+    <div class="tags"><span>Spring Boot</span><span>React</span><span>SaaS</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/Shift.ya" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
    </div>
   </article>
 
   <article class="card rv" data-cat="ia backend">
-   <div class="meta"><b>2026</b><span>Reto técnico de selección</span></div>
-   <h3>E-commerce AI Agent System</h3>
-   <p>Pipeline de dos agentes (BugDetector y Gate) que detecta bugs, genera fixes validados con pytest y decide go / warn / no-go. Detalle completo en la sección de IA.</p>
+   <h3>AI Agent System</h3>
+   <p>Agentes que detectan bugs y validan el fix con tests.</p>
    <div class="foot">
-    <div class="tags"><span>Python</span><span>FastAPI</span><span>LLMs</span><span>Agentes</span><span>pytest</span></div>
-    <div class="lks"><a class="lk" href="#ia">Ver detalle ↑</a><a class="lk" href="https://github.com/Santicof/Reto_Tecnico_CANDIDATO_v2-IA-" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
+    <div class="tags"><span>Python</span><span>LLMs</span><span>pytest</span></div>
+    <div class="lks"><a class="lk" href="#ia">Ver arriba ↑</a></div>
    </div>
   </article>
 
   <article class="card rv" data-cat="full backend">
-   <div class="meta"><b>2025</b><span>Trabajo Final Integrador · UNLa</span></div>
-   <h3>Planning Board académico</h3>
-   <p>Mi tesis de grado: un tablero visual web para planificar horarios académicos y asignar docentes a materias y comisiones.</p>
-   <ul><li>Backend Spring Boot con API REST</li><li>Frontend React + TypeScript</li><li>Entorno completo con Docker Compose</li></ul>
+   <h3>Planning Board (tesis)</h3>
+   <p>Tablero web para planificar horarios y asignar docentes.</p>
    <div class="foot">
-    <div class="tags"><span>Spring Boot</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker Compose</span></div>
-    <span class="priv">Código académico · demo a pedido</span>
-   </div>
-  </article>
-
-  <article class="card rv" data-cat="backend redes">
-   <div class="meta"><b>2024</b><span>Sistemas distribuidos · equipo de 3</span></div>
-   <h3>Sistema de stock con gRPC</h3>
-   <p>Un cliente se comunica por gRPC con un servidor que provee los datos de stock de los locales. Contratos definidos en Protocol Buffers.</p>
-   <ul><li>Servidor <strong>.NET 8</strong> con Grpc.AspNetCore sobre HTTP/2</li><li>Arquitectura en capas (Application / Domain / Infrastructure) con <strong>MediatR</strong> estilo CQRS</li><li>Repositorio genérico con <strong>EF Core 8</strong> y SQL Server</li><li>Cliente en Python con grpcio</li></ul>
-   <div class="foot">
-    <div class="tags"><span>C#</span><span>.NET 8</span><span>gRPC</span><span>Protobuf</span><span>MediatR</span><span>EF Core</span><span>SQL Server</span><span>Python</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/grpc-Stock-System-Grupo-4" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
-   </div>
-  </article>
-
-  <article class="card rv" data-cat="backend">
-   <div class="meta"><b>2024</b><span>Modelado de datos</span></div>
-   <h3>API de turnos médicos</h3>
-   <p>Base de una API en .NET 7 para que un paciente reserve turnos con un médico: modelo relacional de médicos, pacientes, especialidades y turnos con migraciones code-first.</p>
-   <div class="foot">
-    <div class="tags"><span>C#</span><span>.NET 7</span><span>EF Core</span><span>Migraciones</span><span>SQL Server</span><span>Swagger</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/Api-Turnos" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
-   </div>
-  </article>
-
-  <article class="card rv" data-cat="backend full">
-   <div class="meta"><b>2023</b><span>Orientación a Objetos 2 · UNLa · equipo de 4</span></div>
-   <h3>Smart City: gestión de dispositivos IoT</h3>
-   <p>Aplicación web para administrar los dispositivos inteligentes de un campus (alumbrado, riego, estacionamiento y climatización), registrar sus métricas y generar eventos.</p>
-   <ul><li>Mi parte: dispositivo de estacionamiento, métricas y eventos en todas las capas, y controllers y vistas de administración</li><li>Login con Spring Security, BCrypt y seguridad por método</li><li>Herencia de entidades con JPA y trabajo en equipo con pull requests</li></ul>
-   <div class="foot">
-    <div class="tags"><span>Java 17</span><span>Spring Boot 3</span><span>Spring Security</span><span>Thymeleaf</span><span>JPA</span><span>MySQL</span><span>Bootstrap</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/GRUPO-18-OO2-2023" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
-   </div>
-  </article>
-
-  <article class="card rv" data-cat="redes">
-   <div class="meta"><b>2024</b><span>Redes · cliente-servidor</span></div>
-   <h3>Generador de usuarios y contraseñas (Winsock)</h3>
-   <p>Aplicación cliente-servidor donde el servidor genera usuarios o contraseñas según lo que pida el cliente. Manejo de conexiones, errores y validación de entrada, con clientes en C++ y en Python.</p>
-   <div class="foot">
-    <div class="tags"><span>C++</span><span>Python</span><span>Winsock</span><span>Sockets</span><span>TCP</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/ServerPasswordNamesGenerator" target="_blank" rel="noopener noreferrer">Ver repositorio →</a></div>
-   </div>
-  </article>
-
-  <article class="card rv" data-cat="redes">
-   <div class="meta"><b>2023</b><span>Redes · red local</span></div>
-   <h3>Servidor traductor TCP/IP con roles</h3>
-   <p>Servidor en C++ para varios clientes en red local que traduce palabras inglés ↔ español desde un diccionario en archivo.</p>
-   <ul><li>Login con roles ADMIN y CONSULTA</li><li>Bloqueo de cuenta tras 3 intentos fallidos y desbloqueo por el admin</li><li>Alta de usuarios y log de actividad del servidor</li></ul>
-   <div class="foot">
-    <div class="tags"><span>C++</span><span>Winsock</span><span>TCP/IP</span><span>Autenticación</span></div>
-    <div class="lks"><a class="lk" href="https://github.com/Santicof/Conection-WebSocket-Tcp-Ip-Translate" target="_blank" rel="noopener noreferrer">Servidor →</a><a class="lk" href="https://github.com/Santicof/Conexion-cliente-tcp-ip" target="_blank" rel="noopener noreferrer">Cliente →</a></div>
+    <div class="tags"><span>Spring Boot</span><span>React</span><span>Docker</span></div>
+    <span class="priv">Demo a pedido</span>
    </div>
   </article>
 
   <article class="card rv" data-cat="front">
-   <div class="meta"><b>2026</b><span>Emprendimiento · @san.nfc</span></div>
-   <h3>San NFC: tarjetas NFC y QR para negocios</h3>
-   <p>Herramientas para mi emprendimiento de tarjetas NFC: al acercar el celular, el cliente llega directo a la acción que el negocio necesita.</p>
-   <ul><li>Generador de enlaces de reseñas de Google y QR listos para imprimir</li><li>Páginas NFC que copian el alias de Mercado Pago al portapapeles para pagar al instante</li><li>Panel de administración de clientes y tarjetas</li></ul>
+   <h3>San NFC</h3>
+   <p>Tarjetas NFC/QR para negocios: reseñas de Google y pago con alias de Mercado Pago.</p>
    <div class="foot">
-    <div class="tags"><span>JavaScript</span><span>Node.js</span><span>NFC</span><span>QR</span><span>Google Maps</span></div>
+    <div class="tags"><span>JavaScript</span><span>Node.js</span><span>NFC</span></div>
     <span class="priv">Repositorio privado</span>
    </div>
   </article>
 
-  <article class="card span2 rv" data-cat="poo">
-   <div class="meta"><b>2022</b><span>Fundamentos · Java</span></div>
-   <h3>Fundamentos de POO en Java</h3>
-   <p>Siete sistemas ABM construidos a partir de diagramas de clases: la base de modelado que hoy aplico en dominios reales.</p>
-   <div class="minilist">
-    <a href="https://github.com/Santicof/Gestion-de-Seguridad-con-orientacion-a-objetos" target="_blank" rel="noopener noreferrer">Gestión de seguridad ↗</a>
-    <a href="https://github.com/Santicof/ypf-proyecto-con-orientacion-objetos" target="_blank" rel="noopener noreferrer">Cuentas cliente YPF ↗</a>
-    <a href="https://github.com/Santicof/Stock-System-ObjectParadigm" target="_blank" rel="noopener noreferrer">Sistema de stock ↗</a>
-    <a href="https://github.com/Santicof/Sistema-de-Mercancias" target="_blank" rel="noopener noreferrer">Sistema de mercancías ↗</a>
-    <a href="https://github.com/Santicof/Sistema-de-Mensajeria-con-Orientacion-Objetos" target="_blank" rel="noopener noreferrer">Sistema de mensajería ↗</a>
-    <a href="https://github.com/Santicof/Sistema-de-contenido-audiovisual" target="_blank" rel="noopener noreferrer">Contenido audiovisual ↗</a>
-    <a href="https://github.com/Santicof/SistemasDeAsistencias" target="_blank" rel="noopener noreferrer">Sistema de asistencias ↗</a>
+  <article class="card rv" data-cat="backend redes">
+   <h3>Stock con gRPC</h3>
+   <p>Servidor .NET 8 y cliente Python comunicados por gRPC.</p>
+   <div class="foot">
+    <div class="tags"><span>.NET 8</span><span>gRPC</span><span>CQRS</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/grpc-Stock-System-Grupo-4" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
    </div>
-   <div class="foot"><div class="tags"><span>Java</span><span>POO</span><span>UML</span><span>Colecciones</span></div></div>
+  </article>
+
+  <article class="card rv" data-cat="backend full">
+   <h3>Smart City IoT</h3>
+   <p>App Spring Boot para dispositivos de un campus, en equipo de 4.</p>
+   <div class="foot">
+    <div class="tags"><span>Spring Boot</span><span>Security</span><span>MySQL</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/GRUPO-18-OO2-2023" target="_blank" rel="noopener noreferrer">Repositorio →</a></div>
+   </div>
+  </article>
+
+  <article class="card rv" data-cat="redes">
+   <h3>Servidores TCP en C++</h3>
+   <p>Cliente-servidor con sockets: generador de credenciales y traductor con roles.</p>
+   <div class="foot">
+    <div class="tags"><span>C++</span><span>Winsock</span><span>TCP/IP</span></div>
+    <div class="lks"><a class="lk" href="https://github.com/Santicof/ServerPasswordNamesGenerator" target="_blank" rel="noopener noreferrer">Generador →</a><a class="lk" href="https://github.com/Santicof/Conection-WebSocket-Tcp-Ip-Translate" target="_blank" rel="noopener noreferrer">Traductor →</a></div>
+   </div>
   </article>
  </div>
 </div></section>
@@ -779,18 +599,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div>
    <span class="kicker">07 / Docencia</span>
    <h2>Profesor universitario</h2>
-   <p class="sub">Enseñar me obliga a entender las cosas a fondo, y esa misma claridad la llevo a los equipos con los que trabajo.</p>
   </div>
  </div>
  <div class="two">
   <div class="card rv" style="justify-content:center">
-   <p class="quote">“Si no lo podés explicar simple, todavía <em>no lo entendiste</em> del todo.”</p>
+   <p class="quote">“Si no lo podés explicar simple, todavía <em>no lo entendiste</em>.”</p>
   </div>
-  <div class="card rv">
-   <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
-   <h3>Universidad Nacional de Lanús</h3>
-   <p>Docente en materias de <strong>programación</strong> y de <strong>habilidades blandas</strong>. Acompaño a estudiantes desde la lógica de programación hasta la forma de comunicarse y trabajar en equipo.</p>
-   <ul><li>Lógica de programación y buenas prácticas</li><li>Comunicación, trabajo en equipo y liderazgo</li><li>Puente entre la facultad y la industria con ejemplos reales</li></ul>
+  <div class="card rv" style="justify-content:center">
+   <h3>UNLa</h3>
+   <p>Docente de programación y habilidades blandas. Explicar bien también es parte del trabajo en equipo.</p>
   </div>
  </div>
 </div></section>
@@ -801,14 +618,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <div>
    <span class="kicker">08 / Divulgación</span>
    <h2>San Sistemas</h2>
-   <p class="sub">Humor tech en español, divulgación sobre IA y desarrollo, y un podcast para conversar con gente del medio.</p>
+   <p class="sub">Divulgación sobre IA y desarrollo, con humor y un podcast.</p>
   </div>
-  <div class="stats" style="margin:0;padding:0;border:0;grid-template-columns:auto"><div><b style="color:var(--hot)">56K+</b><span>comunidad de más de 56 mil personas en Instagram y TikTok</span></div></div>
+  <div class="stats" style="margin:0;padding:0;border:0;grid-template-columns:auto"><div><b style="color:var(--hot)">56K+</b><span>en Instagram y TikTok</span></div></div>
  </div>
- <div class="grid">
-  <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div><h3>Reels y TikToks</h3><p>Divulgación sobre IA y desarrollo con formato POV y humor de oficina de sistemas.</p><div class="foot"><div class="tags"><span>Instagram</span><span>TikTok</span></div></div></article>
-  <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg></div><h3>Podcast “De Informáticos Para Informáticos”</h3><p>Entrevistas con colegas sobre tecnología, carrera profesional e inteligencia artificial. Los reels con subtítulos y títulos animados los genero por código con Remotion (React).</p><div class="foot"><div class="tags"><span>Podcast</span><span>Entrevistas</span><span>YouTube</span><span>Remotion</span></div></div></article>
-  <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div><h3>Por qué lo hago</h3><p>Comunicar tecnología es parte del trabajo de un ingeniero: documentar, explicar decisiones y enseñar al equipo.</p></article>
+ <div class="two">
+  <article class="card rv"><h3>Reels y TikToks</h3><p>IA y desarrollo explicados en formato corto.</p></article>
+  <article class="card rv"><h3>Podcast</h3><p>“De Informáticos Para Informáticos”: entrevistas sobre tecnología y carrera.</p></article>
  </div>
  <div class="social rv" style="margin-top:1.6rem">
   <a class="btn" href="https://www.instagram.com/san_sistemas" target="_blank" rel="noopener noreferrer">Instagram @san_sistemas</a>
@@ -821,8 +637,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <section id="contacto" class="contact"><div class="wrap rv">
  <span class="kicker">09 / Contacto</span>
  <h2>¿Construimos algo?</h2>
- <p class="sub">Busco roles de <strong>Backend Engineer</strong> o <strong>AI Engineer</strong> donde pueda diseñar sistemas distribuidos e integrar IA de forma seria. También me interesan charlas, clases y colaboraciones.</p>
- <div class="looking tags"><span>.NET / C#</span><span>Java / Spring</span><span>Python / IA</span><span>Remoto o híbrido</span><span>Buenos Aires</span></div>
+ <p class="sub">Busco roles de <strong>Backend</strong> o <strong>AI Engineer</strong>. Remoto o híbrido.</p>
+ <div class="looking tags"><span>.NET / C#</span><span>Java</span><span>Python / IA</span><span>Buenos Aires</span></div>
  <div class="btns">
   <a class="btn main" href="mailto:santiagobc826@gmail.com">
    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>santiagobc826@gmail.com</a>
@@ -901,7 +717,7 @@ if(!reduce){setInterval(function(){roleEl.style.opacity=0;setTimeout(function(){
  var c=document.getElementById('mg');
  var capEl=document.getElementById('mgT'),steps=[].slice.call(document.querySelectorAll('#mgSteps button')),playBtn=document.getElementById('mgPlay');
  var SD=2.8,N=6,TOTAL=SD*N;
- var CAP=['Llega un envío con la dirección tal como la escribió el cliente.','La normalizo: primero busco en la cache multinivel de MongoDB y clasifico el formato.','Si no hubo coincidencia, Google Geocoding devuelve las coordenadas.','Las coordenadas caen en una celda de la grilla hexagonal H3.','Esa celda pertenece a una zona, y la zona a una unidad operativa.','Se asigna sucursal y transportista para la última milla.'];
+ var CAP=['Llega un envío con la dirección del cliente.','Se normaliza: cache en MongoDB + clasificación.','Sin coincidencia, Google devuelve las coordenadas.','Las coordenadas caen en una celda H3.','La celda define la zona y su unidad operativa.','Se asigna sucursal y transportista.'];
  var RAW='av siempreviva 742 ,lanus bs as',NORM='Av. Siempre Viva 742, Lanús, Buenos Aires',COORD='-34.7065, -58.3912',CELL='H3 · 88c2e3a1b5fffff';
  var W,H,x,R,hw,vh,fs,hexes=[],pin,branch,zc,zTop,zLeft,maxP,maxZ,t=0,last=0,run=false,paused=false,raf=0,cur=-1;
  function cl(v){return v<0?0:v>1?1:v;}
